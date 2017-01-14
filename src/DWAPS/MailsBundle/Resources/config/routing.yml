@@ -1,0 +1,11 @@
+dwaps_mails_contact:
+    path:     /contact
+    defaults: { _controller: DWAPSMailsBundle:AdminMails:contact }
+
+dwaps_mails_liste_formations:
+    path:     /listeFormations
+    defaults: { _controller: DWAPSMailsBundle:AdminMails:listeFormations }
+
+dwaps_mails_confirm_contact:
+    path:     /confirmContact
+    defaults: { _controller: DWAPSMailsBundle:AdminMails:confirmContact }

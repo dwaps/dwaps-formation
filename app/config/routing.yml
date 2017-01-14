@@ -1,0 +1,7 @@
+dwaps_core:
+    resource: "@DWAPSCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+dwaps_mails:
+    resource: "@DWAPSMailsBundle/Resources/config/routing.yml"
+    prefix:   /mail

@@ -1,0 +1,114 @@
+/**
+* Auteur : 	DWAPS Formation - Michael Cornillon
+* Mail : 	contact@dwaps.fr
+* Tel :		0651279211
+* Site : 	http://dwaps.fr
+* Date : 	14/01/2017
+**/
+
+/*
+- MEDIA QUERIES : <560 >=560 (comme Bootstrap) >=768 >=992 >=1200
+xxs
+@media only screen and (max-width: 560px )
+{	
+}
+xs
+@media only screen and (min-width: 560px )
+{	
+}
+sm
+@media only screen and (min-width: 768px )
+{	
+}
+md
+@media only screen and (min-width: 992px )
+{
+}
+lg
+@media only screen and (min-width: 1200px )
+{
+}
+
+**/
+
+@import url('https://fonts.googleapis.com/css?family=Cantarell');
+
+
+/*CHARTE GRAPHIQUE*/
+.dwaps-bg-red
+{
+	background: #C22D2D;
+}
+
+.dwaps-red
+{
+	color: #C22D2D;
+}
+
+.dwaps-bg-green
+{
+	background: #2F9138;
+}
+
+.dwaps-green
+{
+	color: #2F9138;
+}
+
+.dwaps-bg-blue
+{
+	background: #2F4F4F;
+}
+
+.dwaps-blue
+{
+	color: #2F4F4F;
+}
+
+.dwaps-bg-lightblue
+{
+	background: #D4D4D4;
+}
+
+.dwaps-lightblue
+{
+	color: #D4D4D4;
+}
+/*FIN CHARTE GRAPHIQUE*/
+
+
+body
+{
+	display: none;
+	min-width: 350px;
+	font-family: 'Cantarell', sans-serif;
+	/*background: url( ../../../images/noisy-1.png ) center repeat;*/
+	overflow-x: hidden;
+}
+
+a, a:link, a:visited, a:active, a:focus
+{
+	text-decoration: none !important;
+	border: none !important;
+	color: white;
+	outline: 0;
+}
+
+.margin-top
+{
+	margin-top: 12%;
+}
+
+input::-moz-focus-inner { 
+  border: 0; 
+}
+
+
+/*xs, sm, md, lg*/
+@media only screen and (min-width: 560px )
+{
+	body
+	{
+		overflow: scroll !important;
+	}
+}

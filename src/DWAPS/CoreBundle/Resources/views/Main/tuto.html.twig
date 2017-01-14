@@ -1,0 +1,30 @@
+{% extends "DWAPSCoreBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - Présentation
+{% endblock %}
+
+{% block dwaps_core_menu %}
+	<!-- SPLASHSCREEN / MENU -->
+	{{
+		render(
+			controller( 'DWAPSCoreBundle:Main:menu', {
+				first_start: "accueil",
+				onglet_actif: 1
+			})
+		)
+	}}
+{% endblock %}
+
+{% block dwaps_core_body %}
+	
+	<!-- MAIN -->
+	<div class="container">
+		<div class="jumbotron margin-top">
+
+			<h1>PAGE TUTORIELS</h1>
+			
+		</div>
+	</div>
+
+{% endblock %}

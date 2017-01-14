@@ -1,0 +1,39 @@
+{% extends "DWAPSCoreBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - Présentation
+{% endblock %}
+
+{% block dwaps_core_menu %}
+	<!-- SPLASHSCREEN / MENU -->
+	{{
+		render(
+			controller( 'DWAPSCoreBundle:Main:menu', {
+				first_start: first_start,
+				onglet_actif: 0
+			})
+		)
+	}}
+{% endblock %}
+
+{% block dwaps_core_body %}
+	
+	<!-- MAIN -->
+	<div class="container">
+		
+		<div class="jumbotron margin-top">
+
+			<h1>PAGE ACCUEIL</h1>
+
+			{% for notif in app.session.flashbag.get( 'form_ok' ) %}
+			    {{ notif }}
+			{% endfor %}
+
+			<p>{{ "now" | date( 'd/m/Y' ) }}</p>
+
+			<a href="{{ path( 'dwaps_core_nav' ) }}" class="label label-danger">ADMIN</a>
+			
+		</div>
+	</div>
+
+{% endblock %}

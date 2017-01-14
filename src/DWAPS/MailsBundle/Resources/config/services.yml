@@ -1,0 +1,4 @@
+services:
+#    dwaps_mails.example:
+#        class: DWAPS\MailsBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

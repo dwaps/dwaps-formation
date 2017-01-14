@@ -1,0 +1,50 @@
+# FRONT OFFICE
+
+dwaps_core_home:
+    path:     /{first_start}
+    defaults:
+      _controller: DWAPSCoreBundle:Main:index
+      first_start: 1
+    requirements:
+      first_start: accueil
+
+
+dwaps_core_tutorials:
+  path: /tutorials
+  defaults:
+    _controller: DWAPSCoreBundle:Main:tuto
+
+dwaps_core_formations:
+  path: /formations
+  defaults:
+    _controller: DWAPSCoreBundle:Main:formations
+
+dwaps_core_portfolio:
+  path: /portfolio
+  defaults:
+    _controller: DWAPSCoreBundle:Main:portfolio
+
+dwaps_core_contact:
+  path: /contact
+  defaults:
+    _controller: DWAPSCoreBundle:Main:contact
+
+
+
+
+# BACK OFFICE
+
+dwaps_core_nav:
+    path:     /admin-nav
+    defaults: 
+      _controller: DWAPSCoreBundle:Admin:nav
+
+
+
+# TEST
+
+dwaps_core_test:
+  path: /test
+  defaults:
+    _controller: DWAPSCoreBundle:Main:test
+

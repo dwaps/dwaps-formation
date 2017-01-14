@@ -1,0 +1,56 @@
+
+<!-- BOUTON MEU POUR PETITS ECRANS -->
+<div class="bt-menu">
+	<a href="#" class="bt-menu btn dwaps-bg-red">=</a>
+</div>
+
+<div id="{{ idMainDiv }}">
+	<div id="top">
+
+		<div class="logo">
+			<a href="{{ path( 'dwaps_core_home', { first_start: "accueil" } ) }}">
+				<div id="body-dwaps">
+						<div class="right-antenna"></div>
+						<div class="left-antenna"></div>
+						<div class="bugdroid-head"></div>
+						<div class="left-eye"></div>
+						<div class="right-eye"></div>
+						<div class="red-side"></div>
+				</div>
+				<div class="DWAPS">
+					<div class="D">D<div class="bodyword">éveloppement</div></div>
+					<div class="W">W<div class="bodyword">eb et</div></div>
+					<div class="A">A<div class="bodyword">pplications</div></div>
+					<div class="P">P<div class="bodyword">our</div></div>
+					<div class="S">S<div class="bodyword">martphones</div></div>
+				</div>
+			</a>
+		</div>
+
+		<nav>
+			<div id="selectBox"></div>
+			<div id="activeBox"></div>
+			<ul class="hidden">
+				{% for item in nav %}
+					{% if loop.first %}
+				    	<li>
+				    		<a href="{{ path( item.link, { first_start: "accueil" } ) }}">
+				    			Accueil
+				    		</a>
+				    	</li>
+				    {% else %}
+				    	<li class="{{ item.isActive }}">
+				    		<a href="{{ path( item.link ) }}">
+				    			{{ item.name }}
+				    		</a>
+				    	</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</nav>
+
+	</div>
+
+	<div id="bottom"></div>
+
+</div>

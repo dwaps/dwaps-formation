@@ -1,0 +1,70 @@
+{
+  "name": "dwaps",
+  "version": "1.0.0",
+  "description": "Site officiel de DWAPS Formation, basé à Anduze (30)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwaps/dwaps.git"
+  },
+  "keywords": [
+    "DWAPS",
+    "DWAPS Formation",
+    "Michael Cornillon",
+    "Cornillon",
+    "Anduze",
+    "Gard",
+    "Cours de programmation",
+    "Cours de programmation web",
+    "Cours de programmation mobile",
+    "Cours de programmation web et mobile",
+    "Apprendre à programmer",
+    "Développement web",
+    "Développement mobile",
+    "Développement web et mobile",
+    "Développement Web et Applications Pour Smartphones",
+    "Prestations",
+    "Prestations web",
+    "Prestations mobile",
+    "Prestations wet et mobile",
+    "Cours à domicile",
+    "Cours informatique à domicile",
+    "Formation informatique à domicile",
+    "Formation web à domicile",
+    "Formation mobile à domicile",
+    "Formation web",
+    "Formation mobile",
+    "Formation web et mobile",
+    "Initiation à l'informatique",
+    "Formation professionnelle",
+    "Formateur indépendant",
+    "Consultant en informatique",
+    "Consultant en programmation",
+    "Consultant en développement web",
+    "Consultant en développement mobile",
+    "Consultant en développement web et mobile",
+    "Formateur en informatique",
+    "Formateur en programmation",
+    "Formateur en développement web",
+    "Formateur en développement mobile",
+    "Formateur en développement web et mobile",
+    "Formation en informatique",
+    "Formation en programmation",
+    "Formation en développement web",
+    "Formation en développement mobile",
+    "Formation en développement web et mobile"
+  ],
+  "author": "Michael Cornillon",
+  "license": "SEE LICENSE IN dwaps.fr",
+  "bugs": {
+    "url": "https://github.com/dwaps/dwaps/issues"
+  },
+  "homepage": "https://github.com/dwaps/dwaps#readme",
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap": "^3.3.7"
+  }
+}

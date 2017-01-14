@@ -1,0 +1,4 @@
+services:
+#    dwaps_core.example:
+#        class: DWAPS\CoreBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
