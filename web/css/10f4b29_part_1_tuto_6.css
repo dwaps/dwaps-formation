@@ -1,0 +1,29 @@
+
+/* CARTES */
+.dwaps-card
+{
+	box-shadow: 2px 2px 5px #333;
+	background: #F2EBEB;
+	padding: 15px;	
+}
+
+.dwaps-card h1
+{
+	text-align: center;
+	/*text-shadow: 1px 1px 0 #fff, 2px 2px 1px #888, 3px 3px 1px #222;*/
+	text-shadow: 1px 1px 1px #222;
+	text-transform: uppercase;
+	font-weight: bolder;
+	padding-bottom: 10px;
+}
+
+.dwaps-card img
+{
+	width: 100%;
+}
+
+.dwaps-card p
+{
+	color: #33334A !important;
+	font-size: 1.3em;
+}

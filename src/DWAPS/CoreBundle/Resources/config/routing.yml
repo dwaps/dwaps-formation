@@ -15,11 +15,13 @@ dwaps_core_home:
     requirements:
       first_start: accueil
 
-
-dwaps_core_tutorials:
-  path: /tutorials
+dwaps_core_tuto:
+  path: /tuto/{id}
   defaults:
     _controller: DWAPSCoreBundle:Main:tuto
+    id: 0
+  requirements:
+    id: \d+
 
 dwaps_core_formations:
   path: /formations
