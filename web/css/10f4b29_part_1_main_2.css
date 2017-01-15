@@ -84,6 +84,7 @@ body
 	font-family: 'Cantarell', sans-serif;
 	/*background: url( ../../../images/noisy-1.png ) center repeat;*/
 	overflow-x: hidden;
+	font-size: 17px;
 }
 
 a, a:link, a:visited, a:active, a:focus
@@ -96,7 +97,7 @@ a, a:link, a:visited, a:active, a:focus
 
 .margin-top
 {
-	margin-top: 12%;
+	margin-top: 110px;
 }
 
 input::-moz-focus-inner { 

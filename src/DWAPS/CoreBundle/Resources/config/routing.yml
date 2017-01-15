@@ -1,3 +1,10 @@
+# Exemple route optionnelle mobile detect
+# someaction:
+#     pattern:  /someaction
+#     defaults: { _controller: YourBundle:Index:someAction }
+#     options:  { mobile: redirect, tablet: no_redirect, full: redirect_without_path } # redirect, no_redirect, redirect_without_path
+
+
 # FRONT OFFICE
 
 dwaps_core_home:

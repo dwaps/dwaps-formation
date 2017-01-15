@@ -196,22 +196,6 @@
 {
 	.logo
 	{
-		top: 2% !important;
-		background: transparent !important;
-		box-shadow: none !important;
-		z-index: -1 !important;
-	}	
-	#body-dwaps
-	{
-		-webkit-transform: scale( .5 );
-		   -moz-transform: scale( .5 );
-		    -ms-transform: scale( .5 );
-		     -o-transform: scale( .5 );
-		        transform: scale( .5 );
-		left: 2px;
-	}
-	.DWAPS
-	{
 		display: none;
 	}
 }

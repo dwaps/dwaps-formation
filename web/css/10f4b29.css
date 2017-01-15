@@ -196,22 +196,6 @@
 {
 	.logo
 	{
-		top: 2% !important;
-		background: transparent !important;
-		box-shadow: none !important;
-		z-index: -1 !important;
-	}	
-	#body-dwaps
-	{
-		-webkit-transform: scale( .5 );
-		   -moz-transform: scale( .5 );
-		    -ms-transform: scale( .5 );
-		     -o-transform: scale( .5 );
-		        transform: scale( .5 );
-		left: 2px;
-	}
-	.DWAPS
-	{
 		display: none;
 	}
 }
@@ -301,6 +285,7 @@ body
 	font-family: 'Cantarell', sans-serif;
 	/*background: url( ../../../images/noisy-1.png ) center repeat;*/
 	overflow-x: hidden;
+	font-size: 17px;
 }
 
 a, a:link, a:visited, a:active, a:focus
@@ -313,7 +298,7 @@ a, a:link, a:visited, a:active, a:focus
 
 .margin-top
 {
-	margin-top: 12%;
+	margin-top: 110px;
 }
 
 input::-moz-focus-inner { 
@@ -336,6 +321,7 @@ input::-moz-focus-inner {
 	top: 0;
 	left: 0;
 	right: 0;
+	min-height: 70px;
 	bottom: 88%;
 }
 
@@ -431,6 +417,14 @@ nav
 	{
 		right: 10px;
 		left: 10px;
+	}
+}
+
+@media only screen and (max-width: 900px )
+{
+	nav ul li:first-child
+	{
+		display: none !important;
 	}
 }
 
