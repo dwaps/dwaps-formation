@@ -4,9 +4,6 @@
 #     defaults: { _controller: YourBundle:Index:someAction }
 #     options:  { mobile: redirect, tablet: no_redirect, full: redirect_without_path } # redirect, no_redirect, redirect_without_path
 
-
-# FRONT OFFICE
-
 dwaps_core_home:
     path:     /{first_start}
     defaults:
@@ -16,35 +13,28 @@ dwaps_core_home:
       first_start: accueil
 
 dwaps_core_tutorials:
-  path: /tutorials
-  defaults:
-    _controller: DWAPSCoreBundle:Tuto:tutorials
+    path: /tutorials
+    defaults:
+      _controller: DWAPSCoreBundle:Tuto:tutorials
 
 dwaps_core_tutorial:
-  path: /tutorial/{id}
-  defaults:
-    _controller: DWAPSCoreBundle:Tuto:tutorial
-  requirements:
-    id: \d+
+    path: /tutorial/{id}
+    defaults:
+      _controller: DWAPSCoreBundle:Tuto:tutorial
+    requirements:
+      id: \d+
 
 dwaps_core_formations:
-  path: /formations
-  defaults:
-    _controller: DWAPSCoreBundle:Main:formations
+    path: /formations
+    defaults:
+      _controller: DWAPSCoreBundle:Main:formations
 
 dwaps_core_portfolio:
-  path: /portfolio
-  defaults:
-    _controller: DWAPSCoreBundle:Main:portfolio
+    path: /portfolio
+    defaults:
+      _controller: DWAPSCoreBundle:Main:portfolio
 
 dwaps_core_contact:
-  path: /contact
-  defaults:
-    _controller: DWAPSCoreBundle:Main:contact
-
-
-
-
-# BACK OFFICE
-
-
+    path: /contact
+    defaults:
+      _controller: DWAPSCoreBundle:Main:contact

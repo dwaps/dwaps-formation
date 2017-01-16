@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block dwaps_core_menu %}
-	<!-- SPLASHSCREEN / MENU -->
 	{{
 		render(
 			controller( 'DWAPSCoreBundle:Main:menu', {
@@ -47,18 +46,23 @@
 				<a href="{{ path( 'dwaps_core_tutorial', { id: loop.index } ) }}">
 					<div class="row">
 						<div class="col-xs-12">
-							<h1 class="dwaps-red">Découvrir Appache 2</h1>
+							<h1 class="dwaps-red">{{ tuto.title }}</h1>
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="col-xs-12 col-md-4">
-							{% image '@DWAPSCoreBundle/Resources/public/images/tuto.png' %}
-							    <img src="{{ asset_url }}" alt="Example" />
-							{% endimage %}
+							<img src="bundles/dwapscore/images/{{ tuto.image.url }}" alt="{{ tuto.image.alt }}" />
 						</div>
-						<div class="col-xs-12 col-md-8">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat voluptatem maxime maiores veritatis quas ducimus, officia tempore quia consequuntur, recusandae minima vitae animi quidem, quae consectetur unde. Esse, impedit, expedita!</p>
+						<div class="col-xs-12 col-md-8 margin-top">
+							<p>
+								{{ tuto.description }}
+							</p>
+							<p class="margin-top">
+								<a href="#" class="label dwaps-bg-blue">
+									Catégorie : {{ tuto.category }}
+								</a>
+							</p>
 						</div>
 
 					</div>

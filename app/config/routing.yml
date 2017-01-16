@@ -6,9 +6,9 @@ dwaps_core:
     resource: "@DWAPSCoreBundle/Resources/config/routing.yml"
     prefix:   /
     
-dwaps_mails:
-    resource: "@DWAPSMailsBundle/Resources/config/routing.yml"
-    prefix:   /mail
+# dwaps_mails:
+#     resource: "@DWAPSMailsBundle/Resources/config/routing.yml"
+#     prefix:   /mail
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"

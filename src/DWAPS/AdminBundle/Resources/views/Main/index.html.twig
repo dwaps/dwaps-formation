@@ -1,0 +1,13 @@
+{% extends 'DWAPSAdminBundle::layout.html.twig' %}
+
+
+{% block body %}
+	{% for flash in app.session.flashbag.all %}
+	    {{ dump( flash ) }}
+	{% endfor %}
+	<a href="{{ path( 'dwaps_admin_add_tuto' ) }}" class="btn btn-danger">
+		Créer un tutoriel
+	</a>
+
+	<a href="{{ path( 'dwaps_core_home', { first_start: 'accueil' }) }}" class="btn btn-warning">Retour à l'accueil du site</a>
+{% endblock %}

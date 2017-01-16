@@ -27,3 +27,10 @@
 	color: #33334A !important;
 	font-size: 1.3em;
 }
+
+.dwaps-card .label
+{
+	font-size: 0.8em;
+	font-weight: 100;
+	text-shadow: none;
+}

@@ -37,42 +37,42 @@ lg
 /*CHARTE GRAPHIQUE*/
 .dwaps-bg-red
 {
-	background: #C22D2D;
+	background: #C22D2D !important;
 }
 
 .dwaps-red
 {
-	color: #C22D2D;
+	color: #C22D2D !important;
 }
 
 .dwaps-bg-green
 {
-	background: #2F9138;
+	background: #2F9138 !important;
 }
 
 .dwaps-green
 {
-	color: #2F9138;
+	color: #2F9138 !important;
 }
 
 .dwaps-bg-blue
 {
-	background: #2F4F4F;
+	background: #2F4F4F !important;
 }
 
 .dwaps-blue
 {
-	color: #2F4F4F;
+	color: #2F4F4F !important;
 }
 
 .dwaps-bg-lightblue
 {
-	background: #D4D4D4;
+	background: #D4D4D4 !important;
 }
 
 .dwaps-lightblue
 {
-	color: #D4D4D4;
+	color: #D4D4D4 !important;
 }
 /*FIN CHARTE GRAPHIQUE*/
 

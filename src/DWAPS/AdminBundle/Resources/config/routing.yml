@@ -1,3 +1,9 @@
-dwaps_admin_homepage:
+dwaps_admin_home:
     path:     /
-    defaults: { _controller: DWAPSAdminBundle:Default:index }
+    defaults: 
+      _controller: DWAPSAdminBundle:Main:index
+
+dwaps_admin_add_tuto:
+    path: /add/tuto
+    defaults:
+      _controller: DWAPSAdminBundle:Main:addTuto
