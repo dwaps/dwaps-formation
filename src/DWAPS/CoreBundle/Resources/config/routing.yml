@@ -15,11 +15,15 @@ dwaps_core_home:
     requirements:
       first_start: accueil
 
-dwaps_core_tuto:
-  path: /tuto/{id}
+dwaps_core_tutorials:
+  path: /tutorials
   defaults:
-    _controller: DWAPSCoreBundle:Main:tuto
-    id: 0
+    _controller: DWAPSCoreBundle:Tuto:tutorials
+
+dwaps_core_tutorial:
+  path: /tutorial/{id}
+  defaults:
+    _controller: DWAPSCoreBundle:Tuto:tutorial
   requirements:
     id: \d+
 
@@ -43,17 +47,4 @@ dwaps_core_contact:
 
 # BACK OFFICE
 
-dwaps_core_nav:
-    path:     /admin-nav
-    defaults: 
-      _controller: DWAPSCoreBundle:Admin:nav
-
-
-
-# TEST
-
-dwaps_core_test:
-  path: /test
-  defaults:
-    _controller: DWAPSCoreBundle:Main:test
 

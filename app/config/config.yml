@@ -80,6 +80,12 @@ assetic:
     filters:
         cssrewrite: ~
 
+# FOSUserBundle
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: DWAPS\CoreBundle\Entity\DwapsUser
+
 # Mobile Detect
 # mobile_detect:
 #     redirect:

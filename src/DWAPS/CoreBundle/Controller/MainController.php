@@ -33,7 +33,7 @@ class MainController extends Controller
 
         $links = [
             "dwaps_core_home",
-            "dwaps_core_tuto",
+            "dwaps_core_tutorials",
             "dwaps_core_formations",
             "dwaps_core_portfolio",
             "dwaps_core_contact"
@@ -63,13 +63,12 @@ class MainController extends Controller
 
 
 // FONCTIONS ONGLETS MAIN MENU
-    public function tutoAction( Request $request, $id )
-    {
-        return $this->render('DWAPSCoreBundle:Main:tuto.html.twig', array(
-            'ongletActif' => 1,
-            'id' => $id
-        ));
-    }
+    // public function tutorielsAction( Request $request )
+    // {
+    //     return $this->render('DWAPSCoreBundle:Main:tuto.html.twig', array(
+    //         'ongletActif' => 1
+    //     ));
+    // }
 
     public function formationsAction( Request $request )
     {
@@ -91,15 +90,5 @@ class MainController extends Controller
             'ongletActif' => 4
         ));
     }
-// FIN FONCTIONS ONGLETS MAIN MENU
 
-
-    public function testAction( Request $request )
-    {
-    	$session = $request->getSession();
-
-        return $this->render('DWAPSCoreBundle:Main:test.html.twig', array(
-            'test' => $session->get( 'test' )
-        ));
-    }
 }

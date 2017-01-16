@@ -1,0 +1,4 @@
+services:
+#    dwaps_admin.example:
+#        class: DWAPS\AdminBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

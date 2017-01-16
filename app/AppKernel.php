@@ -18,6 +18,8 @@ class AppKernel extends Kernel
             new DWAPS\CoreBundle\DWAPSCoreBundle(),
             new DWAPS\MailsBundle\DWAPSMailsBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new DWAPS\AdminBundle\DWAPSAdminBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

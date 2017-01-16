@@ -114,6 +114,18 @@ input::-moz-focus-inner {
   border: 0; 
 }
 
+/*MESSAGE FLASH*/
+.dwaps-flash
+{
+	text-align: center;
+}
+
+.dwaps-flash h3
+{
+	position: relative;
+	top: -5px;
+}
+
 
 /*xs, sm, md, lg*/
 @media only screen and (min-width: 560px )

@@ -1,13 +1,5 @@
 <?php
 
-/*
-    IMPORTANT :
-    Comme nav est parent optionnel d'un navChild,
-    si on affecte ou supprime un enfant à nav,
-    il faut impérativement utilisé addNavChild() et removeNavChild() de nav uniquement
-    car ces méthodes conservent la cohérence !
-*/
-
 namespace DWAPS\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -163,8 +155,6 @@ class DwapsNav
     {
         $this->navChild[] = $navChild;
 
-        $navChild->setNav($this); // Le nav enfant doit savoir qu'un parent lui a été affecté !
-
         return $this;
     }
 
@@ -176,7 +166,6 @@ class DwapsNav
     public function removeNavChild(\DWAPS\CoreBundle\Entity\DwapsNavChild $navChild)
     {
         $this->navChild->removeElement($navChild);
-        $navChild->setNav(null); // Le nav enfant n'a plus de parent !
     }
 
     /**
