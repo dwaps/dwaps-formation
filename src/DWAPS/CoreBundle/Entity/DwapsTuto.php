@@ -56,6 +56,12 @@ class DwapsTuto
      */
     private $image;
 
+    /**
+     *
+     * @ORM\OneToMany(targetEntity="DWAPS\CoreBundle\Entity\DwapsTutoContent", mappedBy="tuto", cascade={"persist","remove"})
+     */
+    private $tutoContent;
+
 
     /**
      * Get id
@@ -185,5 +191,49 @@ class DwapsTuto
     public function getImage()
     {
         return $this->image;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->tutoContent = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add tutoContent
+     *
+     * @param \DWAPS\CoreBundle\Entity\DwapsTutoContent $tutoContent
+     *
+     * @return DwapsTuto
+     */
+    public function addTutoContent(\DWAPS\CoreBundle\Entity\DwapsTutoContent $tutoContent)
+    {
+        $this->tutoContent[] = $tutoContent;
+
+        $tutoContent->setTuto( $this );
+
+        return $this;
+    }
+
+    /**
+     * Remove tutoContent
+     *
+     * @param \DWAPS\CoreBundle\Entity\DwapsTutoContent $tutoContent
+     */
+    public function removeTutoContent(\DWAPS\CoreBundle\Entity\DwapsTutoContent $tutoContent)
+    {
+        $this->tutoContent->removeElement($tutoContent);
+        $tutoContent->setTuto( null );
+    }
+
+    /**
+     * Get tutoContent
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTutoContent()
+    {
+        return $this->tutoContent;
     }
 }

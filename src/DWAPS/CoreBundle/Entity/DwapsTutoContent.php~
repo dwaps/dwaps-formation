@@ -37,7 +37,7 @@ class DwapsTutoContent
 
     /**
      *
-     * @ORM\ManyToOne(targetEntity="DWAPS\CoreBundle\Entity\DwapsTuto")
+     * @ORM\ManyToOne(targetEntity="DWAPS\CoreBundle\Entity\DwapsTuto", inversedBy="tutoContent")
      * @ORM\JoinColumn(nullable=false)
      */
     private $tuto;

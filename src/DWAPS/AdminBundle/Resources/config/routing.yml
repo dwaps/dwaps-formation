@@ -7,3 +7,32 @@ dwaps_admin_add_tuto:
     path: /add/tuto
     defaults:
       _controller: DWAPSAdminBundle:Main:addTuto
+
+dwaps_admin_add_tuto_content:
+    path: /add/tuto/content/{id}
+    defaults:
+      _controller: DWAPSAdminBundle:Main:addTutoContent
+    requirements:
+      id: \d+
+
+dwaps_admin_update_tuto:
+    path: /add/tuto/content/{id}
+    defaults:
+      _controller: DWAPSAdminBundle:Main:updateTuto
+    requirements:
+      id: \d+
+
+dwaps_admin_remove_tuto_content:
+    path: /remove/tuto/content/{idTuto}/{idContent}
+    defaults:
+      _controller: DWAPSAdminBundle:Main:removeTutoContent
+    requirements:
+      idTuto: \d+
+      idContent: \d+
+
+dwaps_admin_remove_tuto:
+    path: /remove/tuto/{id}
+    defaults:
+      _controller: DWAPSAdminBundle:Main:removeTuto
+    requirements:
+      id: \d+

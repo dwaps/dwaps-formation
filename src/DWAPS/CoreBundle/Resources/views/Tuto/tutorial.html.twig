@@ -1,11 +1,55 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-Id du template demandé : {{ id }}
+{% extends "DWAPSCoreBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - Présentation
+{% endblock %}
+
+{% block dwaps_core_menu %}
+	{{
+		render(
+			controller( 'DWAPSCoreBundle:Main:menu', {
+				first_start: "accueil",
+				onglet_actif: 1
+			})
+		)
+	}}
+{% endblock %}
+
+{% block dwaps_core_body %}
+
+	<div class="dwaps-card margin-xtrem-top">
+	
+			<div class="row">
+				<div class="col-xs-12">
+					<h1 class="dwaps-red">{{ tuto.title }}</h1>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 margin-top">
+					{% for content in tuto.tutoContent %}
+						<h2>{{ content.chapter }}</h2>
+					    <p>
+					    	{{ content.paragraph }}
+					    </p>
+					{% else %}
+					    <p>
+					    	Pas de contenu pour le moment !
+					    </p>
+					{% endfor %}
+					{#
+					<p class="margin-top">
+						<a href="#" class="label dwaps-bg-blue">
+							Catégorie : {{ tuto.category }}
+						</a>
+					</p>
+					#}
+				</div>
+			</div>
+			<div class="row">
+				<a href="#" class="col-xs-2 col-xs-offset-10">↑</a>
+			</div>
+
+	</div>
+
+{% endblock %}

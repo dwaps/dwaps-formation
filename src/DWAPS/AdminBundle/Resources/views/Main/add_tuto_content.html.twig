@@ -1,0 +1,13 @@
+<body>
+	{{
+		form( form_add_tuto_content )
+	}}
+		Liste des chapitres :
+		<br>
+		{% for content in tutoContents %}
+		    {{ content.chapter }} |
+		    <a href="{{ path( 'dwaps_admin_remove_tuto_content', { idTuto: idTuto, idContent: content.id } ) }}" class="btn btn-danger">Remove</a>{# |
+		    <a href="{{ path( 'dwaps_admin_update_tuto', { id: content.id }) }}" class="btn btn-warning">Update</a>#}
+		    <br>
+		{% endfor %}
+</body>

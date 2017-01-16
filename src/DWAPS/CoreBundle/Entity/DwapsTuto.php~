@@ -56,6 +56,12 @@ class DwapsTuto
      */
     private $image;
 
+    /**
+     *
+     * @ORM\OneToMany(targetEntity="DWAPS\CoreBundle\Entity\DwapsTutoContent", mappedBy="tuto")
+     */
+    private $tutoContent;
+
 
     /**
      * Get id

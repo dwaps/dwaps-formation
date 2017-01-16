@@ -2,4 +2,15 @@
 	{{
 		form( form_add_tuto )
 	}}
+
+	<p>
+		Liste des tutoriels :
+		<br>
+		{% for tuto in tutorials %}
+		    {{ tuto.title }} |
+		    <a href="{{ path( 'dwaps_admin_remove_tuto', { id: tuto.id } ) }}" class="btn btn-danger">Remove</a> |
+		    <a href="{{ path( 'dwaps_admin_update_tuto', { id: tuto.id }) }}" class="btn btn-warning">Update</a>
+		    <br>
+		{% endfor %}
+	</p>
 </body>
