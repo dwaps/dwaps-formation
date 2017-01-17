@@ -41,7 +41,9 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     globals:
-        # dwaps: "%dwaps%"
+        dwaps: "%dwaps%"
+    # form:
+    #     resources: ['bootstrap_3_layout.html.twig']
 
 # Doctrine Configuration
 doctrine:

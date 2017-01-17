@@ -296,6 +296,22 @@ a, a:link, a:visited, a:active, a:focus
 	outline: 0;
 }
 
+.img-loading
+{
+	position: relative;
+	width: 0;
+	padding-right: 35px;
+	margin: 0 auto;
+
+}
+
+.img-loading img
+{
+	position: absolute;
+	top: 200px;
+	width: 70px !important;
+}
+
 .margin-xtrem-top
 {
 	margin-top: 110px;
@@ -1166,6 +1182,7 @@ nav
 {
 	font-size: 0.8em;
 	font-weight: 100;
+	margin-left: 10px;
 	text-shadow: none;
 }
 
@@ -1177,6 +1194,7 @@ nav
 	    -ms-transition: all .3s;
 	     -o-transition: all .3s;
 	        transition: all .3s;
+	box-shadow: 0 0 0 #333;
 }
 
 .dwaps-card a:hover img
@@ -1186,4 +1204,5 @@ nav
 	    -ms-transform: rotate( 5deg ) scale( 1.1 );
 	     -o-transform: rotate( 5deg ) scale( 1.1 );
 	        transform: rotate( 5deg ) scale( 1.1 );
+	box-shadow: 3px 3px 5px #333;
 }

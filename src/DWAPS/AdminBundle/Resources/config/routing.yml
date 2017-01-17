@@ -30,6 +30,14 @@ dwaps_admin_remove_tuto_content:
       idTuto: \d+
       idContent: \d+
 
+dwaps_admin_update_tuto_content:
+    path: /update/tuto/content/{idTuto}/{idContent}
+    defaults:
+      _controller: DWAPSAdminBundle:Main:updateTutoContent
+    requirements:
+      idTuto: \d+
+      idContent: \d+
+
 dwaps_admin_remove_tuto:
     path: /remove/tuto/{id}
     defaults:

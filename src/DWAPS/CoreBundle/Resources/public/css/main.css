@@ -95,6 +95,22 @@ a, a:link, a:visited, a:active, a:focus
 	outline: 0;
 }
 
+.img-loading
+{
+	position: relative;
+	width: 0;
+	padding-right: 35px;
+	margin: 0 auto;
+
+}
+
+.img-loading img
+{
+	position: absolute;
+	top: 200px;
+	width: 70px !important;
+}
+
 .margin-xtrem-top
 {
 	margin-top: 110px;

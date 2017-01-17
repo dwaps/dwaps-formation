@@ -4,15 +4,12 @@ namespace DWAPS\AdminBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 use DWAPS\CoreBundle\Entity\DwapsTuto;
 use DWAPS\CoreBundle\Entity\DwapsTutoContent;
 use DWAPS\CoreBundle\Entity\DwapsImage;
+use DWAPS\CoreBundle\Form\DwapsTutoType;
+use DWAPS\CoreBundle\Form\DwapsTutoContentType;
 
 class MainController extends Controller
 {
@@ -25,47 +22,16 @@ class MainController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-    	$form = $this->createFormBuilder()
-    		->add( 'title', TextType::class, array(
-                "label" => "Titre du tutoriel : "
-            ))
-    		->add( 'description', TextareaType::class, array(
-                "label" => "Résumé du tutoriel : "
-            ))
-    		->add( 'category', ChoiceType::class, array(
-    			'choices' => array(
-    				'CSS' => 'CSS',
-    				'Server' => 'Server',
-    				'HTML' => 'HTML',
-    				'JavaScript' => 'JavaScript',
-    				'SVG' => 'SVG'
-    			)
-    		))
-    		->add( 'imageUrl', TextType::class, array(
-                "label" => "Nom de l'image : "
-            ))
-    		->add( 'Go', SubmitType::class )
-    		->getForm()
-    	;
+        $tuto = new DwapsTuto();
+        $image = new DwapsImage();
+        $tuto->setImage( $image );
+
+    	$form = $this->createForm( DwapsTutoType::class, $tuto );
 
     	$form->handleRequest( $request );
 
     	if( $form->isSubmitted() && $form->isValid() )
     	{
-    		$data = $form->getData();
-
-    		$tuto = new DwapsTuto();
-    		$tuto->setTitle( $data['title'] );
-    		$tuto->setDescription( $data['description'] );
-    		$tuto->setCategory( $data['category'] );
-    		$tuto->setDate( new \Datetime );
-
-    		$image = new DwapsImage();
-    		$image->setUrl( $data['imageUrl'] );
-    		$image->setAlt( $data['imageUrl'] );
-
-    		$tuto->setImage( $image );
-
     		$em->persist( $tuto );
     		$em->flush();
 
@@ -94,39 +60,21 @@ class MainController extends Controller
     public function addTutoContentAction( Request $request, $id )
     {
         $em = $this->getDoctrine()->getManager();
-        $tuto = $em->getRepository( 'DWAPSCoreBundle:DwapsTuto' )->find( $id );
 
-        $form = $this->createFormBuilder()
-            ->add( 'chapter', TextType::class, array(
-                "label" => "Titre du chapitre : "
-            ))
-            ->add( 'paragraph', TextareaType::class, array(
-                "label" => "Contenu du chapitre : "
-            ))
-            ->add( 'new', CheckboxType::class, array(
-                "label" => "Ajouter un chapitre après celui-ci ?",
-                "required" => false
-            ))
-            ->add( 'Go', SubmitType::class )
-            ->getForm()
-        ;
+        $tutoContent = new DwapsTutoContent();
+        $tuto = $em->getRepository( 'DWAPSCoreBundle:DwapsTuto' )->find( $id );
+        $tutoContent->setTuto( $tuto );
+
+        $form = $this->createForm( DwapsTutoContentType::class, $tutoContent );
 
         $form->handleRequest( $request );
 
         if( $form->isSubmitted() && $form->isValid() )
         {
-            $data = $form->getData();
-        
-            $tutoContent = new DwapsTutoContent();
-            $tutoContent->setChapter( $data['chapter'] );
-            $tutoContent->setParagraph( $data['paragraph'] );
-
-            $tutoContent->setTuto( $tuto );
-
             $em->persist( $tutoContent );
             $em->flush();
 
-            if( !$data['new'] )
+            if( !$tutoContent->getNotLast() )
             {
                 if( null == $request
                     ->getSession()
@@ -154,9 +102,37 @@ class MainController extends Controller
         return $this->render( 'DWAPSAdminBundle:Main:add_tuto_content.html.twig', array(
             "form_add_tuto_content" => $form->createView(),
             "tutoContents" => $tutoContents,
-            "idTuto" => $id
+            "tuto" => $tuto
         ));
     }
+
+
+    public function updateTutoContentAction( Request $request, $idTuto, $idContent )
+    {
+        // $em = $this->getDoctrine()->getManager();
+        // $tutoContent = $em
+        //     ->getRepository( 'DWAPSCoreBundle:DwapsTutoContent' )
+        //     ->find( $idContent )
+        // ;
+
+        // $em->remove( $tutoContent );
+        // $em->flush();
+
+        // $request
+        //     ->getSession()
+        //     ->getFlashBag()
+        //     ->add( "remove_tuto_content", "Le chapitre " . $tutoContent->getChapter() . " a bien été supprimé !" )
+        // ;
+
+        // return $this->redirectToRoute( 'dwaps_admin_add_tuto_content', array(
+        //     "id" => $idTuto
+        // ));
+
+        return $this->redirectToRoute( 'dwaps_admin_add_tuto_content', array(
+            "id" => $idTuto
+        ));
+    }
+
 
     public function removeTutoContentAction( Request $request, $idTuto, $idContent )
     {
@@ -207,6 +183,6 @@ class MainController extends Controller
             ->add( "remove_tuto", "Le tutoriel " . $tuto->getTitle() . " a bien été supprimé !" )
         ;
 
-        return $this->redirectToRoute( 'dwaps_admin_home' );
+        return $this->redirectToRoute( 'dwaps_admin_add_tuto' );
     }
 }

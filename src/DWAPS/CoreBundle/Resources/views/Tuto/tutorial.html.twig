@@ -30,7 +30,7 @@
 					{% for content in tuto.tutoContent %}
 						<h2>{{ content.chapter }}</h2>
 					    <p>
-					    	{{ content.paragraph }}
+					    	{{ content.paragraph | raw }}
 					    </p>
 					{% else %}
 					    <p>

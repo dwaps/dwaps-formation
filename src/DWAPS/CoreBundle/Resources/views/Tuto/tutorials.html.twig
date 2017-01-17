@@ -59,9 +59,11 @@
 								{{ tuto.description }}
 							</p>
 							<p class="margin-top">
-								<a href="#" class="label dwaps-bg-blue">
-									Catégorie : {{ tuto.category }}
-								</a>
+									{% for cat in tuto.category %}
+										<a href="/category/{{ cat.route }}" class="label dwaps-bg-blue">
+									    	{{ cat.name }}
+										</a>
+									{% endfor %}
 							</p>
 						</div>
 

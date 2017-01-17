@@ -27,6 +27,7 @@
 {
 	font-size: 0.8em;
 	font-weight: 100;
+	margin-left: 10px;
 	text-shadow: none;
 }
 
@@ -38,6 +39,7 @@
 	    -ms-transition: all .3s;
 	     -o-transition: all .3s;
 	        transition: all .3s;
+	box-shadow: 0 0 0 #333;
 }
 
 .dwaps-card a:hover img
@@ -47,4 +49,5 @@
 	    -ms-transform: rotate( 5deg ) scale( 1.1 );
 	     -o-transform: rotate( 5deg ) scale( 1.1 );
 	        transform: rotate( 5deg ) scale( 1.1 );
+	box-shadow: 3px 3px 5px #333;
 }

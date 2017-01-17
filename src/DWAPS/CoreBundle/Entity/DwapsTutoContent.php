@@ -42,6 +42,13 @@ class DwapsTutoContent
      */
     private $tuto;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="notLast", type="boolean")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $notLast;
 
     /**
      * Get id
@@ -60,7 +67,7 @@ class DwapsTutoContent
      *
      * @return DwapsTutoContent
      */
-    public function setchapter($chapter)
+    public function setChapter($chapter)
     {
         $this->chapter = $chapter;
 
@@ -72,7 +79,7 @@ class DwapsTutoContent
      *
      * @return string
      */
-    public function getchapter()
+    public function getChapter()
     {
         return $this->chapter;
     }
@@ -123,5 +130,29 @@ class DwapsTutoContent
     public function getTuto()
     {
         return $this->tuto;
+    }
+
+    /**
+     * Set notLast
+     *
+     * @param boolean $notLast
+     *
+     * @return DwapsTutoContent
+     */
+    public function setNotLast($notLast)
+    {
+        $this->notLast = $notLast;
+
+        return $this;
+    }
+
+    /**
+     * Get notLast
+     *
+     * @return boolean
+     */
+    public function getNotLast()
+    {
+        return $this->notLast;
     }
 }

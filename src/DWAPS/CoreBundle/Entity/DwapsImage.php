@@ -57,6 +57,8 @@ class DwapsImage
     {
         $this->url = $url;
 
+        $this->setAlt( $this->url );
+
         return $this;
     }
 

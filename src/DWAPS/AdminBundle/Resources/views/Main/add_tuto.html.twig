@@ -1,16 +1,37 @@
-<body>
-	{{
-		form( form_add_tuto )
-	}}
+{% extends 'DWAPSAdminBundle::layout.html.twig' %}
 
-	<p>
-		Liste des tutoriels :
-		<br>
-		{% for tuto in tutorials %}
-		    {{ tuto.title }} |
-		    <a href="{{ path( 'dwaps_admin_remove_tuto', { id: tuto.id } ) }}" class="btn btn-danger">Remove</a> |
-		    <a href="{{ path( 'dwaps_admin_update_tuto', { id: tuto.id }) }}" class="btn btn-warning">Update</a>
-		    <br>
-		{% endfor %}
-	</p>
-</body>
+{% block dwaps_admin_body %}
+	<div class="row margin-top">
+		<div class="col-md-8">
+			{% form_theme form_add_tuto 'bootstrap_3_horizontal_layout.html.twig' %}
+
+			{{
+				form( form_add_tuto )
+			}}
+		</div>
+		<div class="col-md-4">
+			<p>
+				Liste des tutoriels :
+				<br>
+				<table class="table table-hover">
+					{% for tuto in tutorials %}
+						<tr>
+							<th>{{ tuto.title }}</th>
+						    <td>
+						    	<a href="{{ path( 'dwaps_admin_update_tuto', { id: tuto.id } ) }}" class="btn btn-warning">
+						    		Modifier
+						    	</a>
+						    </td>
+						    <td>
+						    	<a href="{{ path( 'dwaps_admin_remove_tuto', { id: tuto.id } ) }}" class="btn btn-danger">
+						    		Supprimer
+						    	</a>
+						    </td>
+						</tr>
+					{% endfor %}
+				</table>
+			</p>
+		</div>
+	</div>
+
+{% endblock %}

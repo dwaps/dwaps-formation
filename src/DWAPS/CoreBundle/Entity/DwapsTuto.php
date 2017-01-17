@@ -36,9 +36,8 @@ class DwapsTuto
     private $description;
 
     /**
-     * @var string
      *
-     * @ORM\Column(name="category", type="string", length=100)
+     * @ORM\ManyToMany(targetEntity="DWAPS\CoreBundle\Entity\DwapsCategory", cascade={"persist"})
      */
     private $category;
 
@@ -122,30 +121,6 @@ class DwapsTuto
     }
 
     /**
-     * Set category
-     *
-     * @param string $category
-     *
-     * @return Tuto
-     */
-    public function setCategory($category)
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
-    /**
-     * Get category
-     *
-     * @return string
-     */
-    public function getCategory()
-    {
-        return $this->category;
-    }
-
-    /**
      * Set date
      *
      * @param \DateTime $date
@@ -198,6 +173,7 @@ class DwapsTuto
     public function __construct()
     {
         $this->tutoContent = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->date = new \Datetime();
     }
 
     /**
@@ -235,5 +211,43 @@ class DwapsTuto
     public function getTutoContent()
     {
         return $this->tutoContent;
+    }
+
+    /**
+     * Add category
+     *
+     * @param \DWAPS\CoreBundle\Entity\DwapsCategory $category
+     *
+     * @return DwapsTuto
+     */
+    public function addCategory(\DWAPS\CoreBundle\Entity\DwapsCategory $category)
+    {
+        $this->category[] = $category;
+
+        $category->addTuto( $this );
+
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \DWAPS\CoreBundle\Entity\DwapsCategory $category
+     */
+    public function removeCategory(\DWAPS\CoreBundle\Entity\DwapsCategory $category)
+    {
+        $this->category->removeElement($category);
+
+        $category->removeTuto( $this );
+    }
+
+    /**
+     * Get category
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 }

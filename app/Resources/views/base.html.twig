@@ -25,6 +25,15 @@
 
     
     <body class="animated fadeIn dwaps-bg-lightblue">
+        
+        {#
+        <div class="img-loading">
+            {% image '@DWAPSCoreBundle/Resources/public/images/loading.gif' %}
+                <img src="{{ asset_url }}" alt="loading">
+            {% endimage %}
+        </div>
+        #}
+
         {% block body %}{% endblock %}
 
         {% block javascripts %}

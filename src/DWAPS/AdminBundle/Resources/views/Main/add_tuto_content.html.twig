@@ -1,13 +1,42 @@
-<body>
-	{{
-		form( form_add_tuto_content )
-	}}
-		Liste des chapitres :
-		<br>
-		{% for content in tutoContents %}
-		    {{ content.chapter }} |
-		    <a href="{{ path( 'dwaps_admin_remove_tuto_content', { idTuto: idTuto, idContent: content.id } ) }}" class="btn btn-danger">Remove</a>{# |
-		    <a href="{{ path( 'dwaps_admin_update_tuto', { id: content.id }) }}" class="btn btn-warning">Update</a>#}
-		    <br>
-		{% endfor %}
-</body>
+{% extends 'DWAPSAdminBundle::layout.html.twig' %}
+
+{% block dwaps_admin_body %}
+	<div class="row margin-top">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2>{{ tuto.title }}</h2>
+			</div>
+		</div>
+		<div class="col-md-8">
+			{% form_theme form_add_tuto_content 'bootstrap_3_horizontal_layout.html.twig' %}
+
+			{{
+				form( form_add_tuto_content )
+			}}
+		</div>
+		<div class="col-md-4">
+			<p>
+				Liste des chapitres :
+				<br>
+				<table class="table table-hover">
+					{% for content in tutoContents %}
+						<tr>
+							<th>{{ content.chapter }}</th>
+						    <td>
+						    	<a href="{{ path( 'dwaps_admin_update_tuto_content', { idTuto: tuto.id, idContent: content.id } ) }}" class="btn btn-warning">
+						    		Modifier
+						    	</a>
+						    </td>
+						    <td>
+						    	<a href="{{ path( 'dwaps_admin_remove_tuto_content', { idTuto: tuto.id, idContent: content.id } ) }}" class="btn btn-danger">
+						    		Supprimer
+						    	</a>
+						    </td>
+						</tr>
+					{% endfor %}
+				</table>
+			</p>
+		</div>
+	</div>
+
+{% endblock %}
