@@ -191,3 +191,18 @@ input::-moz-focus-inner {
 {
 	background: #467575 !important;
 }
+
+/*PAGINATION*/
+.pagination
+{
+	box-shadow: 1px 1px 1px #333;
+}
+
+.pagination a:hover
+{
+	background: #D4D4D4 !important;
+}
+.pagination .active a
+{
+	background: #2F4F4F !important;
+}

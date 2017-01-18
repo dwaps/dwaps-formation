@@ -2,17 +2,21 @@
 
 
 {% block dwaps_admin_body %}
-
-	{% for flashes in app.session.flashbag.all %}
-		{% for flash in flashes %}
-		    {{ flash }}
-		{% endfor %}
-	{% endfor %}
 	
-	<br><br>
+	<div class="row">
+		<div class="col-xs-12">
+			{% for flashes in app.session.flashbag.all %}
+				{% for flash in flashes %}
+				    {{ flash }}
+				{% endfor %}
+			{% endfor %}
+			
+			<br><br>
 
-	<a href="{{ path( 'dwaps_admin_add_tuto' ) }}" class="btn btn-danger">
-		Créer un tutoriel
-	</a>
-	
+			<a href="{{ path( 'dwaps_admin_add_tuto' ) }}" class="btn btn-danger">
+				Créer un tutoriel
+			</a>
+		</div>
+	</div>
+
 {% endblock %}

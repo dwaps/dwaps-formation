@@ -1,8 +1,10 @@
 {% extends "DWAPSCoreBundle::layout.html.twig" %}
 
+
 {% block title %}
     {{ parent() }} - Présentation
 {% endblock %}
+
 
 {% block dwaps_core_menu %}
 	{{
@@ -15,14 +17,24 @@
 	}}
 {% endblock %}
 
+
 {% block dwaps_core_body %}
 
+	<div class="row text-center margin-xtrem-top">
+		<div class="col-xs-12">
+			{{
+				render( controller( "DWAPSCoreBundle:Tuto:pagination" ) )
+			}}
+		</div>
+	</div>
+
+	<div class="row">
 		{% for tuto in tutorials %}
 
 			{% if loop.first %}
 
 				{% for flash in app.session.flashbag.get( 'no_tuto' ) %}
-					<div class="dwaps-card dwaps-blue dwaps-flash margin-xtrem-top">
+					<div class="dwaps-card dwaps-blue dwaps-flash">
 					    <div class="row">
 					    	<div class="col-xs-12">
 						    	<h3>{{ flash }}</h3>
@@ -31,7 +43,7 @@
 					</div>
 					<div class="dwaps-card margin-top">
 				{% else %}
-					<div class="dwaps-card margin-xtrem-top">
+					<div class="dwaps-card">
 				{% endfor %}
 
 		
@@ -77,5 +89,14 @@
 		    	<!-- Faire un formulaire pour garder l'email des interessés -->
 		    </div>
 		{% endfor %}
+	</div>
+
+	<div class="row text-center">
+		<div class="col-xs-12">
+			{{
+				render( controller( "DWAPSCoreBundle:Tuto:pagination" ) )
+			}}
+		</div>
+	</div>
 
 {% endblock %}

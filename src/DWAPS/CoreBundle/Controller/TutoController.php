@@ -45,4 +45,9 @@ class TutoController extends Controller
         ));
     }
 
+    public function paginationAction()
+    {
+        return $this->render( "DWAPSCoreBundle:Tuto:pagination.html.twig" );
+    }
+
 }
