@@ -1,6 +1,6 @@
 <?php
 
-namespace DWAPS\CoreBundle\Entity;
+namespace DWAPS\ModelBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Tuto
  *
  * @ORM\Table(name="dwaps_tuto")
- * @ORM\Entity(repositoryClass="DWAPS\CoreBundle\Repository\DwapsTutoRepository")
+ * @ORM\Entity(repositoryClass="DWAPS\ModelBundle\Repository\DwapsTutoRepository")
  */
 class DwapsTuto
 {
@@ -37,7 +37,7 @@ class DwapsTuto
 
     /**
      *
-     * @ORM\ManyToMany(targetEntity="DWAPS\CoreBundle\Entity\DwapsCategory", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="DWAPS\ModelBundle\Entity\DwapsCategory", cascade={"persist"})
      */
     private $category;
 
@@ -50,14 +50,14 @@ class DwapsTuto
 
     /**
      *
-     * @ORM\OneToOne(targetEntity="DWAPS\CoreBundle\Entity\DwapsImage", cascade={"persist","remove"})
+     * @ORM\OneToOne(targetEntity="DWAPS\ModelBundle\Entity\DwapsImage", cascade={"persist","remove"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $image;
 
     /**
      *
-     * @ORM\OneToMany(targetEntity="DWAPS\CoreBundle\Entity\DwapsTutoContent", mappedBy="tuto", cascade={"persist","remove"})
+     * @ORM\OneToMany(targetEntity="DWAPS\ModelBundle\Entity\DwapsTutoContent", mappedBy="tuto", cascade={"persist","remove"})
      */
     private $tutoContent;
 
@@ -147,11 +147,11 @@ class DwapsTuto
     /**
      * Set image
      *
-     * @param \DWAPS\CoreBundle\Entity\DwapsImage $image
+     * @param \DWAPS\ModelBundle\Entity\DwapsImage $image
      *
      * @return DwapsTuto
      */
-    public function setImage(\DWAPS\CoreBundle\Entity\DwapsImage $image)
+    public function setImage(\DWAPS\ModelBundle\Entity\DwapsImage $image)
     {
         $this->image = $image;
 
@@ -161,7 +161,7 @@ class DwapsTuto
     /**
      * Get image
      *
-     * @return \DWAPS\CoreBundle\Entity\DwapsImage
+     * @return \DWAPS\ModelBundle\Entity\DwapsImage
      */
     public function getImage()
     {
@@ -179,11 +179,11 @@ class DwapsTuto
     /**
      * Add tutoContent
      *
-     * @param \DWAPS\CoreBundle\Entity\DwapsTutoContent $tutoContent
+     * @param \DWAPS\ModelBundle\Entity\DwapsTutoContent $tutoContent
      *
      * @return DwapsTuto
      */
-    public function addTutoContent(\DWAPS\CoreBundle\Entity\DwapsTutoContent $tutoContent)
+    public function addTutoContent(\DWAPS\ModelBundle\Entity\DwapsTutoContent $tutoContent)
     {
         $this->tutoContent[] = $tutoContent;
 
@@ -195,9 +195,9 @@ class DwapsTuto
     /**
      * Remove tutoContent
      *
-     * @param \DWAPS\CoreBundle\Entity\DwapsTutoContent $tutoContent
+     * @param \DWAPS\ModelBundle\Entity\DwapsTutoContent $tutoContent
      */
-    public function removeTutoContent(\DWAPS\CoreBundle\Entity\DwapsTutoContent $tutoContent)
+    public function removeTutoContent(\DWAPS\ModelBundle\Entity\DwapsTutoContent $tutoContent)
     {
         $this->tutoContent->removeElement($tutoContent);
         $tutoContent->setTuto( null );
@@ -216,11 +216,11 @@ class DwapsTuto
     /**
      * Add category
      *
-     * @param \DWAPS\CoreBundle\Entity\DwapsCategory $category
+     * @param \DWAPS\ModelBundle\Entity\DwapsCategory $category
      *
      * @return DwapsTuto
      */
-    public function addCategory(\DWAPS\CoreBundle\Entity\DwapsCategory $category)
+    public function addCategory(\DWAPS\ModelBundle\Entity\DwapsCategory $category)
     {
         $this->category[] = $category;
 
@@ -232,9 +232,9 @@ class DwapsTuto
     /**
      * Remove category
      *
-     * @param \DWAPS\CoreBundle\Entity\DwapsCategory $category
+     * @param \DWAPS\ModelBundle\Entity\DwapsCategory $category
      */
-    public function removeCategory(\DWAPS\CoreBundle\Entity\DwapsCategory $category)
+    public function removeCategory(\DWAPS\ModelBundle\Entity\DwapsCategory $category)
     {
         $this->category->removeElement($category);
 

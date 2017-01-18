@@ -5,11 +5,11 @@ namespace DWAPS\AdminBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-use DWAPS\CoreBundle\Entity\DwapsTuto;
-use DWAPS\CoreBundle\Entity\DwapsTutoContent;
-use DWAPS\CoreBundle\Entity\DwapsImage;
-use DWAPS\CoreBundle\Form\DwapsTutoType;
-use DWAPS\CoreBundle\Form\DwapsTutoContentType;
+use DWAPS\ModelBundle\Entity\DwapsTuto;
+use DWAPS\ModelBundle\Entity\DwapsTutoContent;
+use DWAPS\ModelBundle\Entity\DwapsImage;
+use DWAPS\ModelBundle\Form\DwapsTutoType;
+use DWAPS\ModelBundle\Form\DwapsTutoContentType;
 
 class MainController extends Controller
 {
@@ -36,7 +36,7 @@ class MainController extends Controller
     		$em->flush();
 
             $id = $em
-                ->getRepository( 'DWAPSCoreBundle:DwapsTuto' )
+                ->getRepository( 'DWAPSModelBundle:DwapsTuto' )
                 ->findBy(
                     array(
                         "title" => $tuto->getTitle()
@@ -49,7 +49,7 @@ class MainController extends Controller
             ));
     	}
 
-        $tutorials = $em->getRepository( "DWAPSCoreBundle:DwapsTuto" )->findAll();
+        $tutorials = $em->getRepository( "DWAPSModelBundle:DwapsTuto" )->findAll();
 
     	return $this->render( 'DWAPSAdminBundle:Main:add_tuto.html.twig', array(
     		'form_add_tuto' => $form->createView(),
@@ -62,7 +62,7 @@ class MainController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $tutoContent = new DwapsTutoContent();
-        $tuto = $em->getRepository( 'DWAPSCoreBundle:DwapsTuto' )->find( $id );
+        $tuto = $em->getRepository( 'DWAPSModelBundle:DwapsTuto' )->find( $id );
         $tutoContent->setTuto( $tuto );
 
         $form = $this->createForm( DwapsTutoContentType::class, $tutoContent );
@@ -93,7 +93,7 @@ class MainController extends Controller
         }
 
         $tutoContents = $em
-            ->getRepository( 'DWAPSCoreBundle:DwapsTutoContent' )
+            ->getRepository( 'DWAPSModelBundle:DwapsTutoContent' )
             ->findBy( array(
                 "tuto" => $tuto
             ))
@@ -111,7 +111,7 @@ class MainController extends Controller
     {
         // $em = $this->getDoctrine()->getManager();
         // $tutoContent = $em
-        //     ->getRepository( 'DWAPSCoreBundle:DwapsTutoContent' )
+        //     ->getRepository( 'DWAPSModelBundle:DwapsTutoContent' )
         //     ->find( $idContent )
         // ;
 
@@ -138,7 +138,7 @@ class MainController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $tutoContent = $em
-            ->getRepository( 'DWAPSCoreBundle:DwapsTutoContent' )
+            ->getRepository( 'DWAPSModelBundle:DwapsTutoContent' )
             ->find( $idContent )
         ;
 
@@ -172,7 +172,7 @@ class MainController extends Controller
     public function removeTutoAction( Request $request, $id )
     {
         $em = $this->getDoctrine()->getManager();
-        $tuto = $em->getRepository( 'DWAPSCoreBundle:DwapsTuto' )->find( $id );
+        $tuto = $em->getRepository( 'DWAPSModelBundle:DwapsTuto' )->find( $id );
 
         $em->remove( $tuto );
         $em->flush();

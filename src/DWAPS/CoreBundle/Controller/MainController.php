@@ -5,7 +5,7 @@ namespace DWAPS\CoreBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-use DWAPS\CoreBundle\Entity\DwapsNav;
+use DWAPS\ModelBundle\Entity\DwapsNav;
 
 class MainController extends Controller
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace DWAPS\CoreBundle\Repository;
+namespace DWAPS\ModelBundle\Repository;
 
 /**
  * DwapsTutoContentRepository

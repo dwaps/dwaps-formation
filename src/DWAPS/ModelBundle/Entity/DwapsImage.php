@@ -1,6 +1,6 @@
 <?php
 
-namespace DWAPS\CoreBundle\Entity;
+namespace DWAPS\ModelBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * DwapsImage
  *
  * @ORM\Table(name="dwaps_image")
- * @ORM\Entity(repositoryClass="DWAPS\CoreBundle\Repository\DwapsImageRepository")
+ * @ORM\Entity(repositoryClass="DWAPS\ModelBundle\Repository\DwapsImageRepository")
  */
 class DwapsImage
 {

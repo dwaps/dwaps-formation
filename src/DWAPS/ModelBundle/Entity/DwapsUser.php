@@ -1,6 +1,6 @@
 <?php
 	
-	namespace DWAPS\CoreBundle\Entity;
+	namespace DWAPS\ModelBundle\Entity;
 
 	use FOS\UserBundle\Model\User as BaseUser;
 	use Doctrine\ORM\Mapping as ORM;

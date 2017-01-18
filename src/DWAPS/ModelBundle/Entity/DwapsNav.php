@@ -8,7 +8,7 @@
     car ces méthodes conservent la cohérence !
 */
 
-namespace DWAPS\CoreBundle\Entity;
+namespace DWAPS\ModelBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -16,7 +16,7 @@ use Doctrine\ORM\Mapping as ORM;
  * DwapsNav
  *
  * @ORM\Table(name="dwaps_nav")
- * @ORM\Entity(repositoryClass="DWAPS\CoreBundle\Repository\DwapsNavRepository")
+ * @ORM\Entity(repositoryClass="DWAPS\ModelBundle\Repository\DwapsNavRepository")
  */
 class DwapsNav
 {
@@ -45,7 +45,7 @@ class DwapsNav
 
     /**
      *
-     * @ORM\OneToMany(targetEntity="DWAPS\CoreBundle\Entity\DwapsNavChild", mappedBy="nav")
+     * @ORM\OneToMany(targetEntity="DWAPS\ModelBundle\Entity\DwapsNavChild", mappedBy="nav")
      */
     private $navChild;
 
@@ -155,11 +155,11 @@ class DwapsNav
     /**
      * Add navChild
      *
-     * @param \DWAPS\CoreBundle\Entity\DwapsNavChild $navChild
+     * @param \DWAPS\ModelBundle\Entity\DwapsNavChild $navChild
      *
      * @return DwapsNav
      */
-    public function addNavChild(\DWAPS\CoreBundle\Entity\DwapsNavChild $navChild)
+    public function addNavChild(\DWAPS\ModelBundle\Entity\DwapsNavChild $navChild)
     {
         $this->navChild[] = $navChild;
 
@@ -171,9 +171,9 @@ class DwapsNav
     /**
      * Remove navChild
      *
-     * @param \DWAPS\CoreBundle\Entity\DwapsNavChild $navChild
+     * @param \DWAPS\ModelBundle\Entity\DwapsNavChild $navChild
      */
-    public function removeNavChild(\DWAPS\CoreBundle\Entity\DwapsNavChild $navChild)
+    public function removeNavChild(\DWAPS\ModelBundle\Entity\DwapsNavChild $navChild)
     {
         $this->navChild->removeElement($navChild);
         $navChild->setNav(null); // Le nav enfant n'a plus de parent !

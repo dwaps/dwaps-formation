@@ -1,6 +1,6 @@
 <?php
 
-namespace DWAPS\CoreBundle\Entity;
+namespace DWAPS\ModelBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * DwapsTutoContent
  *
  * @ORM\Table(name="dwaps_tuto_content")
- * @ORM\Entity(repositoryClass="DWAPS\CoreBundle\Repository\DwapsTutoContentRepository")
+ * @ORM\Entity(repositoryClass="DWAPS\ModelBundle\Repository\DwapsTutoContentRepository")
  */
 class DwapsTutoContent
 {
@@ -37,7 +37,7 @@ class DwapsTutoContent
 
     /**
      *
-     * @ORM\ManyToOne(targetEntity="DWAPS\CoreBundle\Entity\DwapsTuto", inversedBy="tutoContent")
+     * @ORM\ManyToOne(targetEntity="DWAPS\ModelBundle\Entity\DwapsTuto", inversedBy="tutoContent")
      * @ORM\JoinColumn(nullable=false)
      */
     private $tuto;
@@ -111,11 +111,11 @@ class DwapsTutoContent
     /**
      * Set tuto
      *
-     * @param \DWAPS\CoreBundle\Entity\DwapsTuto $tuto
+     * @param \DWAPS\ModelBundle\Entity\DwapsTuto $tuto
      *
      * @return DwapsTutoContent
      */
-    public function setTuto(\DWAPS\CoreBundle\Entity\DwapsTuto $tuto)
+    public function setTuto(\DWAPS\ModelBundle\Entity\DwapsTuto $tuto)
     {
         $this->tuto = $tuto;
 
@@ -125,7 +125,7 @@ class DwapsTutoContent
     /**
      * Get tuto
      *
-     * @return \DWAPS\CoreBundle\Entity\DwapsTuto
+     * @return \DWAPS\ModelBundle\Entity\DwapsTuto
      */
     public function getTuto()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace DWAPS\CoreBundle\Form;
+namespace DWAPS\ModelBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -25,7 +25,7 @@ class DwapsImageType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'DWAPS\CoreBundle\Entity\DwapsImage'
+            'data_class' => 'DWAPS\ModelBundle\Entity\DwapsImage'
         ));
     }
 
@@ -34,7 +34,7 @@ class DwapsImageType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'dwaps_corebundle_dwapsimage';
+        return 'dwaps_modelbundle_dwapsimage';
     }
 
 

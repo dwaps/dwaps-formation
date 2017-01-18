@@ -7,7 +7,7 @@
     --> utiliser uniquement les méthodes du nav parent !
 */
 
-namespace DWAPS\CoreBundle\Entity;
+namespace DWAPS\ModelBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -15,7 +15,7 @@ use Doctrine\ORM\Mapping as ORM;
  * DwapsNavChild
  *
  * @ORM\Table(name="dwaps_nav_child")
- * @ORM\Entity(repositoryClass="DWAPS\CoreBundle\Repository\DwapsNavChildRepository")
+ * @ORM\Entity(repositoryClass="DWAPS\ModelBundle\Repository\DwapsNavChildRepository")
  */
 class DwapsNavChild
 {
@@ -44,13 +44,13 @@ class DwapsNavChild
 
     /**
      *
-     * @ORM\ManyToOne(targetEntity="DWAPS\CoreBundle\Entity\DwapsNav", inversedBy="navChild")
+     * @ORM\ManyToOne(targetEntity="DWAPS\ModelBundle\Entity\DwapsNav", inversedBy="navChild")
      * @ORM\JoinColumn(nullable=false)
      */
     private $nav;
 
     /**
-     * @ORM\OneToOne(targetEntity="DWAPS\CoreBundle\Entity\DwapsImage")
+     * @ORM\OneToOne(targetEntity="DWAPS\ModelBundle\Entity\DwapsImage")
      */
     private $image;
 
@@ -116,11 +116,11 @@ class DwapsNavChild
     /**
      * Set nav
      *
-     * @param \DWAPS\CoreBundle\Entity\DwapsNav $nav
+     * @param \DWAPS\ModelBundle\Entity\DwapsNav $nav
      *
      * @return DwapsNavChild
      */
-    public function setNav(\DWAPS\CoreBundle\Entity\DwapsNav $nav)
+    public function setNav(\DWAPS\ModelBundle\Entity\DwapsNav $nav)
     {
         $this->nav = $nav;
 
@@ -130,7 +130,7 @@ class DwapsNavChild
     /**
      * Get nav
      *
-     * @return \DWAPS\CoreBundle\Entity\DwapsNav
+     * @return \DWAPS\ModelBundle\Entity\DwapsNav
      */
     public function getNav()
     {
@@ -140,11 +140,11 @@ class DwapsNavChild
     /**
      * Set image
      *
-     * @param \DWAPS\CoreBundle\Entity\DwapsImage $image
+     * @param \DWAPS\ModelBundle\Entity\DwapsImage $image
      *
      * @return DwapsNavChild
      */
-    public function setImage(\DWAPS\CoreBundle\Entity\DwapsImage $image = null)
+    public function setImage(\DWAPS\ModelBundle\Entity\DwapsImage $image = null)
     {
         $this->image = $image;
 
@@ -154,7 +154,7 @@ class DwapsNavChild
     /**
      * Get image
      *
-     * @return \DWAPS\CoreBundle\Entity\DwapsImage
+     * @return \DWAPS\ModelBundle\Entity\DwapsImage
      */
     public function getImage()
     {

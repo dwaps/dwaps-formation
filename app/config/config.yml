@@ -87,7 +87,7 @@ assetic:
 fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
-    user_class: DWAPS\CoreBundle\Entity\DwapsUser
+    user_class: DWAPS\ModelBundle\Entity\DwapsUser
 
 # TINYMCE
 stfalcon_tinymce:

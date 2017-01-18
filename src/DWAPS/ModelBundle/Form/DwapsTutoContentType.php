@@ -1,17 +1,16 @@
 <?php
 
-namespace DWAPS\CoreBundle\Form;
+namespace DWAPS\ModelBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class DwapsTutoType extends AbstractType
+class DwapsTutoContentType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -19,30 +18,25 @@ class DwapsTutoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', TextType::class, [
-                'label' => 'Titre du tutoriel : ',
+            ->add('chapter', TextType::class, [
+                'label' => 'Titre du chapitre : ',
                 'attr' => [
                     'autofocus' => true
                 ]
             ])
-            ->add('description', TextareaType::class, [
-                'label' => 'Résumé du tutoriel : ',
+            ->add('paragraph', TextareaType::class, [
+                'label' => 'Contenu du chapitre : ',
                 'attr' => [
-                    'rows' => 5
+                    'rows' => 10,
+                    'class' => 'tinymce'
                 ]
             ])
-            ->add('category', EntityType::class, [
-                'label' => 'Catégorie du tutoriel : ',
-                'class' => 'DWAPSCoreBundle:DwapsCategory',
-                'choice_label' => 'name',
-                'multiple' => true,
-                'attr' => [
-                    'style' => 'height:250px'
-                ]
+            ->add('notLast', CheckboxType::class, [
+                'label' => 'Ajouter un chapitre après celui-ci ?',
+                'required' => false
             ])
-            ->add('image', DwapsImageType::class )
             ->add( 'submit', SubmitType::class, [
-                'label' => 'Passer à l\'étape suivante',
+                'label' => 'Enregistrer',
                 'attr' => [
                     'class' => 'btn btn-danger'
                 ]
@@ -56,7 +50,7 @@ class DwapsTutoType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'DWAPS\CoreBundle\Entity\DwapsTuto'
+            'data_class' => 'DWAPS\ModelBundle\Entity\DwapsTutoContent'
         ));
     }
 
@@ -65,7 +59,7 @@ class DwapsTutoType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'dwaps_corebundle_dwapstuto';
+        return 'dwaps_modelbundle_dwapstutocontent';
     }
 
 

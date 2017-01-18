@@ -1,19 +1,19 @@
 <?php
 
-namespace DWAPS\CoreBundle\Form;
+namespace DWAPS\ModelBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class DwapsNavType extends AbstractType
+class DwapsNavChildType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name')->add('link')        ;
+        $builder->add('name')->add('link')->add('nav')->add('image')        ;
     }
     
     /**
@@ -22,7 +22,7 @@ class DwapsNavType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'DWAPS\CoreBundle\Entity\DwapsNav'
+            'data_class' => 'DWAPS\ModelBundle\Entity\DwapsNavChild'
         ));
     }
 
@@ -31,7 +31,7 @@ class DwapsNavType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'dwaps_corebundle_dwapsnav';
+        return 'dwaps_modelbundle_dwapsnavchild';
     }
 
 
