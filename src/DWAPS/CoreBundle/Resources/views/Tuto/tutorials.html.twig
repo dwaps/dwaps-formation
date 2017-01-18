@@ -31,57 +31,36 @@
 	<div class="row">
 		{% for tuto in tutorials %}
 
-			{% if loop.first %}
-
-				{% for flash in app.session.flashbag.get( 'no_tuto' ) %}
-					<div class="dwaps-card dwaps-blue dwaps-flash">
-					    <div class="row">
-					    	<div class="col-xs-12">
-						    	<h3>{{ flash }}</h3>
-					    	</div>
-					    </div>
-					</div>
-					<div class="dwaps-card margin-top">
-				{% else %}
-					<div class="dwaps-card">
-				{% endfor %}
-
-		
-
-			{% elseif loop.last %}
-				<div class="dwaps-card margin-top margin-bottom">
-
-			{% else %}
-				<div class="dwaps-card margin-top">
-			{% endif %}
+			<div class="dwaps-card col-sm-12 col-md-6 margin-top">
 			
 				<a href="{{ path( 'dwaps_core_tutorial', { id: tuto.id } ) }}">
-					<div class="row">
-						<div class="col-xs-12">
-							<h1 class="dwaps-red">{{ tuto.title }}</h1>
-						</div>
-					</div>
 
-					<div class="row">
-						<div class="col-xs-12 col-md-4">
+					<!-- <div class="row"> -->
+						<h1 class="dwaps-red margin-bottom">{{ tuto.title }}</h1>
+					<!-- </div> -->
+
+					<!-- <div class="row"> -->
+						<div class="text-center">
 							<img src="bundles/dwapscore/images/{{ tuto.image.url }}.png" alt="{{ tuto.image.alt }}" />
 						</div>
-						<div class="col-xs-12 col-md-8 margin-top">
-							<p>
-								{{ tuto.description }}
-							</p>
-							<p class="margin-top">
-									{% for cat in tuto.category %}
-										<a href="#" class="label dwaps-bg-blue">
-										<!-- <a href="/category/{{ cat.route }}" class="label dwaps-bg-blue"> -->
-									    	{{ cat.name }}
-										</a>
-									{% endfor %}
-							</p>
-						</div>
+					<!-- </div> -->
 
-					</div>
+					<!-- <div class="row"> -->
+						<p class="margin-top">
+							{{ tuto.description }}
+						</p>
+						<p class="margin-top">
+								{% for cat in tuto.category %}
+									<a href="#" class="label dwaps-bg-blue">
+									<!-- <a href="/category/{{ cat.route }}" class="label dwaps-bg-blue"> -->
+								    	{{ cat.name }}
+									</a>
+								{% endfor %}
+						</p>
+					<!-- </div> -->
+
 				</a>
+
 			</div>
 		{% else %}
 		    <div class="dwaps-card margin-xtrem-top">

@@ -150,14 +150,8 @@ input::-moz-focus-inner {
 /*BLOC TEXTE EN CARTE*/
 
 /* CARTES */
-.dwaps-card:nth-child(2n+0)
-{
-	margin-left: 1%;
-}
-
 .dwaps-card
 {
-	width: 49%;
 	box-shadow: 2px 2px 5px #333;
 	background: #F2EBEB;
 	padding: 15px;
