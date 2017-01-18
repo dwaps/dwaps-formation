@@ -31,6 +31,10 @@
 	<div class="row">
 		{% for tuto in tutorials %}
 
+			{% if loop.index % 2 != 0 %}
+				<div class="row">&nbsp;</div>
+			{% endif %}
+
 			<div class="dwaps-card col-sm-12 col-md-6 margin-top">
 			
 				<a href="{{ path( 'dwaps_core_tutorial', { id: tuto.id } ) }}">

@@ -164,7 +164,7 @@ input::-moz-focus-inner {
 	{
 		width: 49%;
 	}
-	.dwaps-card:nth-child(2n+0)
+	.dwaps-card
 	{
 		margin-left: 1%;
 	}
