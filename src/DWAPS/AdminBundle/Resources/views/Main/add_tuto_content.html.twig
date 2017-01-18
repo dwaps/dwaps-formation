@@ -2,11 +2,16 @@
 
 {% block dwaps_admin_body %}
 	<div class="row margin-top">
-		<div class="row">
-			<div class="col-xs-12">
-				<h2>{{ tuto.title }}</h2>
-			</div>
+		<div class="col-xs-12 text-center margin-bottom">
+			<h1>{{ tuto.title }}</h1>
 		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+			<!-- <textarea class="tinymce"></textarea> -->
+		</div>
+	</div>
+	<div class="row">
 		<div class="col-md-8">
 			{% form_theme form_add_tuto_content 'bootstrap_3_horizontal_layout.html.twig' %}
 
@@ -38,5 +43,44 @@
 			</p>
 		</div>
 	</div>
+
+	{{
+		tinymce_init({
+			theme: {
+				simple: {
+					menubar: false,
+					statusbar: false,
+					body_class: 'dwaps-tinymce',
+  					plugins: [
+  						'fullscreen charmap emoticons searchreplace',
+				        'textcolor colorpicker autolink code link image'
+			        ],
+  					toolbar: [
+  						'styleselect | fontsizeselect | forecolor backcolor | charmap | alignleft aligncenter alignright | underline bold italic',
+  						'link image | blockquote | emoticons | code | removeformat | searchreplace | fullscreen | dwaps'
+  					],
+					fontsize_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
+					forced_root_block: ''
+				}
+			}
+		})
+	}}
+
+	<script type="text/javascript">
+		function tinymce_button_dwaps( ed )
+		{
+			ed.insertContent( '<code style="\
+									display: block;\
+									width: 90%;\
+									background: #000;\
+									color: white;\
+									margin-top: 10px;\
+									margin-bottom: 20px;\
+									padding-top: 5px;\
+									padding-bottom: 5px;\
+									padding-left: 5px;\
+								">CODE_HERE</code><p></p>' );
+		}
+	</script>
 
 {% endblock %}

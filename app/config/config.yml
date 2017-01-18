@@ -4,11 +4,12 @@ imports:
     - { resource: services.yml }
     - { resource: "@DWAPSCoreBundle/Resources/config/services.yml" }
     - { resource: "@DWAPSMailsBundle/Resources/config/services.yml" }
+    - { resource: "@DWAPSModelBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: fr
 
 framework:
     #esi:             ~
@@ -87,6 +88,21 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
     user_class: DWAPS\CoreBundle\Entity\DwapsUser
+
+# TINYMCE
+stfalcon_tinymce:
+        include_jquery: true
+        tinymce_jquery: true
+        selector: ".tinymce"
+        language: %locale%
+        theme:
+            simple:
+                theme: "modern"
+        tinymce_buttons:
+            dwaps: # Id of the first button
+                title: "code"
+                image: "https://www.codeur.com/system/portfolio_elements/images/000/070/156/large/Logo.png?1453310318"
+
 
 # Mobile Detect
 # mobile_detect:

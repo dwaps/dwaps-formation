@@ -17,23 +17,31 @@
 
 {% block dwaps_core_body %}
 
-	<div class="dwaps-card margin-xtrem-top">
+	<div class="dwaps-card tuto margin-xtrem-top">
 	
 			<div class="row">
 				<div class="col-xs-12">
 					<h1 class="dwaps-red">{{ tuto.title }}</h1>
+					<p class="small-labels text-center">
+						{% for cat in tuto.category %}
+							<a href="#" class="label dwaps-bg-blue">
+							<!-- <a href="/category/{{ cat.route }}" class="label dwaps-bg-blue"> -->
+						    	{{ cat.name }}
+							</a>
+						{% endfor %}
+					</p>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-xs-12 margin-top">
 					{% for content in tuto.tutoContent %}
-						<h2>{{ content.chapter }}</h2>
-					    <p>
+						<h2 class="chapter">{{ content.chapter }}</h2>
+					    <p class="paragraph">
 					    	{{ content.paragraph | raw }}
 					    </p>
 					{% else %}
-					    <p>
+					    <p class="paragraph">
 					    	Pas de contenu pour le moment !
 					    </p>
 					{% endfor %}

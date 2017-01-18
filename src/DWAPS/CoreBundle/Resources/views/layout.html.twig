@@ -12,8 +12,23 @@
         <div class="container">
 
             {% block dwaps_core_body %}{% endblock %}
+
+            <div class="text-center margin-top margin-bottom">
+                <a href="{{ path( 'dwaps_admin_home' ) }}" class="label label-danger">
+                    ADMIN
+                </a>
+                &nbsp;
+                <a href="{{ path( 'fos_user_security_login' ) }}" class="label label-danger">
+                    LOGIN
+                </a>
+                &nbsp;
+                <a href="{{ path( 'fos_user_security_logout' ) }}" class="label label-danger">
+                    LOGOUT
+                </a>
+            </div>
             
             <footer class="hidden">
+
                 <div class="text-center">
                     <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licence Creative Commons Attribution - Pas d&#39;Utilisation Commerciale - Pas de Modification 4.0 International</a>.
                 </div>

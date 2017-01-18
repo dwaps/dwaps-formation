@@ -10,4 +10,8 @@ namespace DWAPS\CoreBundle\Repository;
  */
 class DwapsTutoRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findAll()
+    {
+        return $this->findBy(array(), array('id' => 'DESC'));
+    }
 }

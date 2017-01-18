@@ -77,13 +77,17 @@ lg
 /*FIN CHARTE GRAPHIQUE*/
 
 
+html, body
+{
+	overflow-x: hidden !important;
+}
+
 body
 {
 	display: none;
 	min-width: 350px;
 	font-family: 'Cantarell', sans-serif;
 	/*background: url( ../../../images/noisy-1.png ) center repeat;*/
-	overflow-x: hidden;
 	font-size: 17px;
 }
 
@@ -143,11 +147,47 @@ input::-moz-focus-inner {
 }
 
 
-/*xs, sm, md, lg*/
-@media only screen and (min-width: 560px )
+/*BLOC TEXTE EN CARTE*/
+
+/* CARTES */
+.dwaps-card
 {
-	body
-	{
-		overflow: scroll !important;
-	}
+	box-shadow: 2px 2px 5px #333;
+	background: #F2EBEB;
+	padding: 15px;
+}
+
+.dwaps-card h1
+{
+	text-align: center;
+	/*text-shadow: 1px 1px 0 #fff, 2px 2px 1px #888, 3px 3px 1px #222;*/
+	text-shadow: 1px 1px 1px #222;
+	text-transform: uppercase;
+	font-weight: bolder;
+	padding-bottom: 10px;
+}
+
+.dwaps-card p
+{
+	color: #33334A !important;
+	font-size: 1.3em;
+}
+
+.dwaps-card .label
+{
+	font-size: 0.8em;
+	font-weight: 100;
+	margin-left: 10px;
+	line-height: 45px;
+	text-shadow: none;
+	-webkit-transition: background .3s;
+	   -moz-transition: background .3s;
+	    -ms-transition: background .3s;
+	     -o-transition: background .3s;
+	        transition: background .3s;
+}
+
+.dwaps-card .label:hover
+{
+	background: #467575 !important;
 }

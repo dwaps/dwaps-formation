@@ -20,18 +20,25 @@ class DwapsTutoType extends AbstractType
     {
         $builder
             ->add('title', TextType::class, [
-                'label' => 'Titre du tutoriel : '
+                'label' => 'Titre du tutoriel : ',
+                'attr' => [
+                    'autofocus' => true
+                ]
             ])
             ->add('description', TextareaType::class, [
                 'label' => 'Résumé du tutoriel : ',
                 'attr' => [
-                    'rows' => 10
+                    'rows' => 5
                 ]
             ])
             ->add('category', EntityType::class, [
+                'label' => 'Catégorie du tutoriel : ',
                 'class' => 'DWAPSCoreBundle:DwapsCategory',
                 'choice_label' => 'name',
-                'multiple' => true
+                'multiple' => true,
+                'attr' => [
+                    'style' => 'height:250px'
+                ]
             ])
             ->add('image', DwapsImageType::class )
             ->add( 'submit', SubmitType::class, [

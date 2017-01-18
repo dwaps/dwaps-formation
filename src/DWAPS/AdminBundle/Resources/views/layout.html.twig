@@ -10,8 +10,31 @@
         {% block dwaps_admin_menu %}{% endblock %}
 
         <div class="container">
+            <div class="row text-right">
+                <div class="col-xs-12">
+                    {% if app.user %}
+                        <p>
+                            Bonjour {{ app.user.username }} !
+                        </p>
+                    {% endif %}
+                </div>
+            </div>
 
             {% block dwaps_admin_body %}{% endblock %}
+
+            <div class="text-center margin-top margin-bottom">
+                <a href="{{ path( 'dwaps_core_home', { first_start: 'accueil' }) }}" class="btn btn-info">
+                    SITE
+                </a>
+                &nbsp;
+                <a href="{{ path( 'fos_user_security_login' ) }}" class="label label-danger">
+                    LOGIN
+                </a>
+                &nbsp;
+                <a href="{{ path( 'fos_user_security_logout' ) }}" class="label label-danger">
+                    LOGOUT
+                </a>
+            </div>
             
             <footer class="hidden">
                 <div class="text-center">
