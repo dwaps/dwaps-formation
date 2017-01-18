@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mer 18 Janvier 2017 à 20:23
+-- Généré le :  Mer 18 Janvier 2017 à 22:10
 -- Version du serveur :  5.7.16-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.13-0ubuntu0.16.04.1
 
@@ -95,7 +95,8 @@ INSERT INTO `dwaps_category` (`id`, `name`, `route`) VALUES
 (58, 'Symfony', 'symfony'),
 (59, 'JSON', 'json'),
 (60, 'Bower', 'bower'),
-(61, 'Terminal', 'terminal');
+(61, 'Terminal', 'terminal'),
+(62, 'Doctrine', 'doctrine');
 
 -- --------------------------------------------------------
 
@@ -126,6 +127,7 @@ INSERT INTO `dwaps_category_dwaps_tuto` (`dwaps_category_id`, `dwaps_tuto_id`) V
 (9, 17),
 (9, 19),
 (9, 22),
+(9, 25),
 (10, 15),
 (10, 19),
 (11, 23),
@@ -142,14 +144,18 @@ INSERT INTO `dwaps_category_dwaps_tuto` (`dwaps_category_id`, `dwaps_tuto_id`) V
 (36, 21),
 (36, 22),
 (36, 23),
+(36, 25),
 (38, 19),
 (53, 15),
 (54, 15),
 (54, 18),
+(54, 25),
 (55, 15),
 (58, 15),
+(58, 25),
 (60, 22),
-(61, 22);
+(61, 22),
+(62, 25);
 
 -- --------------------------------------------------------
 
@@ -176,7 +182,8 @@ INSERT INTO `dwaps_image` (`id`, `url`, `alt`) VALUES
 (21, 'dwaps-css', 'dwaps-css'),
 (22, 'bower', 'bower'),
 (23, 'bootstrap', 'bootstrap'),
-(24, 'apache-2', 'apache-2');
+(24, 'apache-2', 'apache-2'),
+(25, 'symfony', 'symfony');
 
 -- --------------------------------------------------------
 
@@ -231,7 +238,8 @@ INSERT INTO `dwaps_tuto` (`id`, `image_id`, `title`, `description`, `date`) VALU
 (21, 21, 'Reproduire le logo DWAPS en CSS', 'Vous ne le savez peut-être pas mais avec du pur CSS, on peut en faire des choses ! Y compris dessiner... Je vous propose ici de reproduire le logo DWAPS de toute pièce uniquement avec ce langage. Une fois fini et pour le rendre un peu plus vivant, on lui affectera une animation que nous coderons également en CSS.', '2017-01-18 15:01:03'),
 (22, 22, 'La gestion de dépendance avec Bower', 'A mesure qu\'un projet web grossit, il devient difficile de gérer ses librairies. Sans parler des librairies dont dépendent ces librairies... Bref, le casse-tête est de taille. Bower est justement une solution à ce problème : c\'est un gestionnaire de paquet côté front-end que je vous propose de découvrir sans plus attendre.', '2017-01-18 15:37:15'),
 (23, 23, 'Découverte de Bootstrap', 'Vous en avez assez de réécrire du code CSS rébarbatif  pour la gestion de l\'adaptabilité multi écran par exemple ? Utilisez Bootstrap ! Ce framework vous permettra de concevoir plus rapidement votre projet en responsive web design. Avec lui, il n\'y a même plus besoin de se préoccuper de la création d\'une feuille de style de base ou d\'un reset CSS !', '2017-01-18 16:12:30'),
-(24, 24, 'Mettre en place un serveur web', 'Je vous propose ici de découvrir comment installer et configurer un serveur Apache 2 sur Linux. Cet outil est indispensable pour tester ses sites Internet avant leur hébergements pour le public. Avec une gestion multi-thread en plus d\'une gestion multi-processus, ce serveur gère les requêtes clients sans difficultés, vous ne serez pas déçu.', '2017-01-18 16:30:37');
+(24, 24, 'Mettre en place un serveur web', 'Je vous propose ici de découvrir comment installer et configurer un serveur Apache 2 sur Linux. Cet outil est indispensable pour tester ses sites Internet avant leur hébergements pour le public. Avec une gestion multi-thread en plus d\'une gestion multi-processus, ce serveur gère les requêtes clients sans difficultés, vous ne serez pas déçu.', '2017-01-18 16:30:37'),
+(25, 25, 'Créer des entités à partir de la BDD', 'Dans un projet Symfony, si le client ne me fournit pas de base, je crée mes entités avant de les insérer en base de données car cela m\'évite d\'avoir à coder en SQL. En effet, Symfony met à notre disposition tout un panel de lignes de commandes dont certaines sont spécifiques à Doctrine et rendent la tâche plus aisée. Dans le cas d\'une base existante, il est nécessaire de faire le chemin inverse : c\'est ce que nous verrons dans ce tuto...', '2017-01-18 22:04:38');
 
 -- --------------------------------------------------------
 
@@ -311,7 +319,12 @@ INSERT INTO `dwaps_tuto_dwaps_category` (`dwaps_tuto_id`, `dwaps_category_id`) V
 (23, 11),
 (23, 36),
 (24, 3),
-(24, 5);
+(24, 5),
+(25, 9),
+(25, 36),
+(25, 54),
+(25, 58),
+(25, 62);
 
 -- --------------------------------------------------------
 
@@ -339,7 +352,7 @@ CREATE TABLE `dwaps_user` (
 --
 
 INSERT INTO `dwaps_user` (`id`, `username`, `username_canonical`, `email`, `email_canonical`, `enabled`, `salt`, `password`, `last_login`, `confirmation_token`, `password_requested_at`, `roles`) VALUES
-(1, 'dwaps', 'dwaps', 'contact@dwaps.fr', 'contact@dwaps.fr', 1, NULL, '$2y$13$UXO9t59AOz7AGwkti38sf.PqwqEVnuaBExJrrUFGZGkY5jJdwDXdW', '2017-01-18 20:15:11', NULL, NULL, 'a:1:{i:0;s:16:"ROLE_SUPER_ADMIN";}');
+(1, 'dwaps', 'dwaps', 'contact@dwaps.fr', 'contact@dwaps.fr', 1, NULL, '$2y$13$UXO9t59AOz7AGwkti38sf.PqwqEVnuaBExJrrUFGZGkY5jJdwDXdW', '2017-01-18 21:48:18', NULL, NULL, 'a:1:{i:0;s:16:"ROLE_SUPER_ADMIN";}');
 
 --
 -- Index pour les tables exportées
@@ -418,12 +431,12 @@ ALTER TABLE `dwaps_user`
 -- AUTO_INCREMENT pour la table `dwaps_category`
 --
 ALTER TABLE `dwaps_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 --
 -- AUTO_INCREMENT pour la table `dwaps_image`
 --
 ALTER TABLE `dwaps_image`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT pour la table `dwaps_nav`
 --
@@ -438,7 +451,7 @@ ALTER TABLE `dwaps_nav_child`
 -- AUTO_INCREMENT pour la table `dwaps_tuto`
 --
 ALTER TABLE `dwaps_tuto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT pour la table `dwaps_tuto_content`
 --
