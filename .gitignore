@@ -15,3 +15,5 @@
 /vendor/
 /web/bundles/
 /phpunit.xml
+/src/DWAPS/CoreBundle/Resources/public/lib
+/web/bundles
