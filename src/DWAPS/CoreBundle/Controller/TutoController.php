@@ -23,7 +23,8 @@ class TutoController extends Controller
 
         return $this->render('DWAPSCoreBundle:Tuto:tutorials.html.twig', array(
             'ongletActif' => $this->numNav,
-            'tutorials' => $tutorials
+            'tutorials' => $tutorials,
+            'slug' => 'TEST'
         ));
     }
 

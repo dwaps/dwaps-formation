@@ -1,4 +1,8 @@
+parameters:
+    # app.file.twig.extension.class: DWAPS\CoreBundle\Twig\Extension\FileExtension
+
 services:
-#    dwaps_core.example:
-#        class: DWAPS\CoreBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    # app.file.twig.extension:
+    #     class: %app.file.twig.extension.class%
+    #     tags:
+    #         - { name: twig.extension }

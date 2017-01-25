@@ -16,9 +16,13 @@
             <link rel="stylesheet" href="{{ asset( '/bundles/dwapscore/lib/bootstrap/dist/css/bootstrap.min.css' ) }}">
             <link rel="stylesheet" href="{{ asset( '/bundles/dwapscore/lib/animate.css/animate.min.css' ) }}">
 
+            <link rel="stylesheet" href="/bundles/dwapscore/css/main.css">
+            
+            {#
             {% stylesheets 'bundles/dwapscore/css/*' filter='cssrewrite' %}
                 <link rel="stylesheet" href="{{ asset_url }}" />
             {% endstylesheets %}
+            #}
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>

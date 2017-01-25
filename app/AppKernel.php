@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new DWAPS\AdminBundle\DWAPSAdminBundle(),
             new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
             new DWAPS\ModelBundle\DWAPSModelBundle(),
+            new SamJ\DoctrineSluggableBundle\SamJDoctrineSluggableBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

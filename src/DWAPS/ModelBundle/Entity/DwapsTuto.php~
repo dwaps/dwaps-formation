@@ -271,7 +271,7 @@ class DwapsTuto implements SluggableInterface
     }
 
     public function getSlugFields() {
-        return $this->getTitle();
+        return $this->getName();
     }
     // !SLUG
 

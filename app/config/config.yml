@@ -10,6 +10,7 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
+    web_path: %kernel.root_dir%/../web
 
 framework:
     #esi:             ~
@@ -43,6 +44,7 @@ twig:
     strict_variables: "%kernel.debug%"
     globals:
         dwaps: "%dwaps%"
+        web_path: %web_path%
     # form:
     #     resources: ['bootstrap_3_layout.html.twig']
 

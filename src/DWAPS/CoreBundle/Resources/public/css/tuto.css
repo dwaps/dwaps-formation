@@ -1,10 +1,13 @@
 
 /* CARTES */
 
-.tuto h1
+.tuto h4
 {
-	/*text-align: left !important;*/
-	/*margin-left: 25px;*/
+	margin-top: 40px;
+	margin-bottom: 30px;
+	padding-left: 40px;
+	font-size: 1.5em;
+	font-weight: bold;
 }
 
 .tuto .small-labels
@@ -27,10 +30,21 @@
 	letter-spacing: 6px;
 }
 
-.tuto .paragraph
+.tuto .paragraph p
 {
 	padding-left: 40px;
 	padding-right: 40px;
+}
+
+.tuto ul
+{
+	font-size: 1.2em;
+	list-style-image: url( ../images/puce.png );
+	list-style-position: inside;
+	padding-left: 60px;
+	padding-right: 40px;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
 
 .tuto code
@@ -58,6 +72,75 @@
 	text-shadow: 1px 1px 0 #fff, 2px 2px 1px #888, 3px 3px 1px #222;
 }
 
+.dwaps-card .no-tuto
+{
+	position: relative;
+	height: 350px;
+	background: #888;
+}
+
+.dwaps-card .no-tuto::after
+{
+	display: block;
+	position: absolute;
+	content: "Mince, pas d'image...";
+	left: 50px;
+	top: 50px;
+	background: #fff;
+	-webkit-animation: microgame 5s infinite;
+	-moz-animation: microgame 5s infinite;
+	-ms-animation: microgame 5s infinite;
+	-o-animation: microgame 5s infinite;
+	animation: microgame 5s infinite;
+	box-shadow: 2px 2px 5px #000;
+	border-radius:  50%;
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+	height: 100px;
+	width: 100px;
+}
+
+@keyframes microgame
+{
+	0% {
+		-webkit-transform: translate( 0px, 0px );
+		   -moz-transform: translate( 0px, 0px );
+		    -ms-transform: translate( 0px, 0px );
+		     -o-transform: translate( 0px, 0px );
+		        transform: translate( 0px, 0px );
+	}
+	30% {
+		-webkit-transform: translate( 280px, 180px );
+		   -moz-transform: translate( 280px, 180px );
+		    -ms-transform: translate( 280px, 180px );
+		     -o-transform: translate( 280px, 180px );
+		        transform: translate( 280px, 180px );
+	}
+	50% {
+		-webkit-transform: translate( 10px, 150px );
+		   -moz-transform: translate( 10px, 150px );
+		    -ms-transform: translate( 10px, 150px );
+		     -o-transform: translate( 10px, 150px );
+		        transform: translate( 10px, 150px );
+	}
+	80% {
+		-webkit-transform: translate( 180px, 0px );
+		   -moz-transform: translate( 180px, 0px );
+		    -ms-transform: translate( 180px, 0px );
+		     -o-transform: translate( 180px, 0px );
+		        transform: translate( 180px, 0px );
+	}
+	100% {
+		-webkit-transform: translate( 0px, 0px );
+		   -moz-transform: translate( 0px, 0px );
+		    -ms-transform: translate( 0px, 0px );
+		     -o-transform: translate( 0px, 0px );
+		        transform: translate( 0px, 0px );
+	}
+}
+
+.dwaps-card .no-tuto,
 .dwaps-card img
 {
 	width: 100%;

@@ -1,7 +1,7 @@
 {% extends "DWAPSCoreBundle::layout.html.twig" %}
 
 {% block title %}
-    {{ parent() }} - Présentation
+    {{ parent() }} - Tutoriel
 {% endblock %}
 
 {% block dwaps_core_menu %}
@@ -21,7 +21,7 @@
 	
 			<div class="row">
 				<div class="col-xs-12">
-					<h1 class="dwaps-red">{{ tuto.title }}</h1>
+					<h3 class="dwaps-red">{{ tuto.title }}</h3>
 					<p class="small-labels text-center">
 						{% for cat in tuto.category %}
 							<a href="#" class="label dwaps-bg-blue">
@@ -37,9 +37,9 @@
 				<div class="col-xs-12 margin-top">
 					{% for content in tuto.tutoContent %}
 						<h2 class="chapter">{{ content.chapter }}</h2>
-					    <p class="paragraph">
+					    <div class="paragraph">
 					    	{{ content.paragraph | raw }}
-					    </p>
+					    </div>
 					{% else %}
 					    <p class="paragraph">
 					    	Pas de contenu pour le moment !

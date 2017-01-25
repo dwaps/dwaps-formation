@@ -90,5 +90,4 @@ class MainController extends Controller
             'ongletActif' => 4
         ));
     }
-
 }

@@ -1,0 +1,657 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getcwd"
+			],
+			[
+				"tin",
+				"tinymce_buttons"
+			],
+			[
+				"Dwaps",
+				"DwapsTutoType"
+			],
+			[
+				"DwapsTu",
+				"DwapsTutoContent"
+			],
+			[
+				"Dw",
+				"DwapsTutoContent"
+			],
+			[
+				"Dwa",
+				"DwapsImage"
+			],
+			[
+				"colu",
+				"column-span"
+			],
+			[
+				"bodywo",
+				"bodywordLogo"
+			],
+			[
+				"animat",
+				"animatecss-flip\tflip - Flippers"
+			],
+			[
+				"hi",
+				"hidden"
+			],
+			[
+				"overflo",
+				"overflow-x"
+			],
+			[
+				"fle",
+				"flex-start"
+			],
+			[
+				"DWAS",
+				"DWAPSCoreBundle"
+			],
+			[
+				"perspe",
+				"perspective-origin"
+			],
+			[
+				"toInl",
+				"toInlineBlock"
+			],
+			[
+				"animation",
+				"animation"
+			],
+			[
+				"anima",
+				"animation"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"ocpl",
+				"oc_platform_list_items"
+			],
+			[
+				"mou",
+				"mouseY"
+			],
+			[
+				"textal",
+				"text-align"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/css/tuto.css",
+			"settings":
+			{
+				"buffer_size": 3412,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/michael/Dropbox/DWAPS/site/dwaps/index.php",
+			"settings":
+			{
+				"buffer_size": 2275,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "parameters.yml",
+			"settings":
+			{
+				"buffer_size": 426,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "pci",
+		"selected_items":
+		[
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Install Package Control"
+			]
+		],
+		"width": 503.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/michael/Dropbox/DWAPS/site/dwaps",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/app",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/app/Resources",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/app/Resources/views",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/app/config",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Controller",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/config",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Main",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Tuto",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Entity",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/web"
+	],
+	"file_history":
+	[
+		"/home/michael/Dropbox/DWAPS/site/dwaps/test/index.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/bonjour.php",
+		"/tmp/fz3temp-1/index.php",
+		"/home/michael/.config/sublime-text-3/Packages/User/dwaps-basichtml.sublime-snippet",
+		"/home/michael/Dropbox/DWAPS/site/index.php",
+		"/home/michael/Dropbox/DWAPS/site/.htaccess",
+		"/home/michael/Dropbox/DWAPS/site/index.php-origin",
+		"/home/michael/.config/sublime-text-3/Packages/User/cerf.sublime-snippet",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Entity/DwapsTuto.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Tuto/tutorials.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Controller/TutoController.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/config/services.yml",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/app/config/parameters.yml.dist",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/app/config/parameters.yml",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Controller/MainController.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/app/config/config.yml",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/app/config/services.yml",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Twig/Extension/FileExistsExtension.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/config/services.xml",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/css/tuto.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/css/main.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Tuto/tutorial.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/css/splash-anim.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/css/splash.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Twig/Extension/FileExtension.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/app/Resources/views/base.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/config/parameters.yml",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Twig/Extension/TwigExtension.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/css/tuto-origin.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/css/main-origin.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Tuto/tutorials-origin.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/AdminBundle/Controller/MainController.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Repository/DwapsTutoRepository.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Repository/DwapsTutoContentRepository.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Repository/DwapsNavRepository.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Repository/DwapsNavChildRepository.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Repository/DwapsImageRepository.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Repository/DwapsCategoryRepository.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Form/DwapsTutoType.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Form/DwapsTutoContentType.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Form/DwapsNavType.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Form/DwapsNavChildType.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Form/DwapsImageType.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Form/DwapsCategoryType.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Entity/DwapsCategory.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Entity/DwapsImage.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Entity/DwapsNav.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Entity/DwapsNavChild.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Entity/DwapsTutoContent.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/ModelBundle/Entity/DwapsUser.php",
+		"/home/michael/Téléchargements/dwaps.sql",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Tuto/pagination.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/AdminBundle/Resources/views/Main/index.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/AdminBundle/Resources/views/layout.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/layout.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/app/config/routing.yml",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/app/AppKernel.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Repository/DwapsTutoRepository.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Form/DwapsTutoType.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/AdminBundle/Resources/views/Main/add_tuto.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/AdminBundle/Resources/views/Main/add_tuto_content.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Main/index.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Form/DwapsTutoContentType.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/bower.json",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/composer.json",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Entity/DwapsTuto.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Entity/DwapsImage.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Entity/DwapsTutoContent.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/AdminBundle/Resources/config/routing.yml",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Entity/DwapsCategory.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Form/DwapsCategoryType.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Form/DwapsImageType.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Main/menu.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Main/portfolio.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Main/formations.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Main/contact.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/config/routing.yml",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Entity/DwapsUser.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Entity/DwapsNav.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/app/config/security.yml",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Main/tuto.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/var/cache/dev/classes.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Tuto/tutoriels.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Entity/DwapsNavChild.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Tuto/index.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Repository/TutoRepository.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/css/logo.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/css/menu.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/.gitignore",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/js/app.js",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/base_js.html.twig",
+		"/home/michael/.config/sublime-text-3/Packages/User/dwaps-console-log-ok.sublime-snippet",
+		"/home/michael/.config/sublime-text-3/Packages/User/dwaps-console-log.sublime-snippet",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/.bowerrc",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/package.json",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/Gruntfile.js",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/web/package.json",
+		"/home/michael/.config/sublime-text-3/Packages/User/dwaps-console-log-ln.sublime-snippet",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/js/main.js",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/js/splash.js",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/js/bg.js",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/css/splash-menu-anim.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Admin/nav.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/css/splash-menu.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Controller/AdminController.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Admin/index.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/web/bundles/dwapscore/css/splash-menu.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Repository/DwapsNavRepository.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Splashscreen/logo.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/web/bundles/dwapscore/css/splash-menu-anim.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/web/js/d61f3c7.js",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/js/bg.js.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/web/bundles/dwapscore/css/main.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/web/css/10f4b29_part_1_main_1.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/web/bundles/dwaps_core/css/main.css",
+		"/home/michael/Dropbox/DWAPS/prestations/web/sites/.htaccess.dwaps",
+		"/etc/apache2/sites-available/000-default.conf",
+		"/etc/apache2/ports.conf",
+		"/etc/apache2/apache2.conf",
+		"/home/michael/Dropbox/DWAPS/prestations/web/sites/htaccess.txt",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/web/bundles/dwaps_core/css/splash-menu-origin.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/views/Test/test.html.twig",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/web/bundles/dwaps_core/css/menu.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/web/bundles/dwaps_core/css/splashscreen.css",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/web/bundles/package.json",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/OC/PlatformBundle/Resources/config/routing.yml",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/OC/PlatformBundle/Controller/TestController.php",
+		"/home/michael/Dropbox/DWAPS/site/dwaps/src/OC/PlatformBundle/Resources/views/Test/list_items.html.twig"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"basic-addon3",
+			"180px",
+			"200%",
+			"0%,",
+			"100",
+			", 0 );",
+			"100% );",
+			"100",
+			"0,",
+			"FileExtension",
+			"parameters",
+			"twig",
+			"BOTTOM",
+			"Bottom",
+			"bottom",
+			"toBottom",
+			"twig",
+			"col-sm-12",
+			"xs",
+			"DWAPSCoreBundle",
+			"DWAPSModelBundle",
+			"DWAPSCoreBundle",
+			"DWAPSModelBundle",
+			"DWAPSCoreBundle",
+			"symfony",
+			"orm",
+			"core",
+			"imports",
+			"core",
+			"Core",
+			"CoreBundle",
+			"corebundle",
+			"CoreBundle",
+			"Entity",
+			"\n                <br>",
+			"Admin",
+			"tuto",
+			"category",
+			"Category",
+			"category",
+			"Category",
+			"category",
+			"Category",
+			"category",
+			"Category",
+			"category",
+			"fullpage",
+			"color",
+			"':",
+			"div",
+			"texarea",
+			"bbcode",
+			"\"",
+			"h2",
+			"bootstrap",
+			"return",
+			" 1.1",
+			"rotate( 5deg )",
+			"2deg",
+			"5deg",
+			"5px",
+			"category",
+			"last",
+			"string",
+			"chapter",
+			"form_add_tuto",
+			"tuto",
+			"Tuto",
+			"tuto",
+			"Tuto",
+			"tuto",
+			")",
+			"Tuto",
+			"tuto",
+			"__construct",
+			"twig",
+			"tuto",
+			"div",
+			"h3",
+			"id",
+			"Tuto",
+			"tuto",
+			"addNavChild",
+			"getFlashBag",
+			"tutoContent",
+			");",
+			"1s",
+			"100px",
+			"'",
+			";",
+			"tag",
+			"category",
+			"Category",
+			"category",
+			"Category",
+			"category",
+			"titre",
+			"Titre",
+			"titre",
+			"Titre",
+			"titre",
+			"dwaps_core_",
+			"dwaps_core_nav",
+			"nav",
+			"tutori",
+			"tutoriel",
+			"item",
+			"h3",
+			"numNav",
+			"Entity",
+			"navChild",
+			"NavChild",
+			"navChild",
+			"NavChild",
+			"navChild",
+			"NavChild",
+			"navChild",
+			"NavChild",
+			"navChild",
+			"NavChild",
+			"navChild",
+			"NavChild",
+			"navChild",
+			"NavChild",
+			"navChild",
+			"NavChild",
+			"navChild",
+			"image"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"this.nav",
+			".red\\n{\\n\\tbackground: red;\\n}",
+			".red {\\n\\tbackground: red;\\n}",
+			"$1"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/michael/Dropbox/DWAPS/site/dwaps/src/DWAPS/CoreBundle/Resources/public/css/tuto.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3412,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1517,
+								1517
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1870.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/michael/Dropbox/DWAPS/site/dwaps/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								643,
+								643
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 396.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "parameters.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 426,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								204,
+								204
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 130.0
+	},
+	"pinned_build_system": "Packages/TypeScript/TypeScript.sublime-build",
+	"project": "dwaps.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 274.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
