@@ -39,7 +39,7 @@
 			{% endif %}
 			
 			
-				<a href="{{ path( 'dwaps_core_tutorial', { id: tuto.id } ) }}">
+				<a href="{{ path( 'dwaps_core_tutorial', { slug: tuto.slug } ) }}">
 
 						<h3 class="dwaps-red margin-bottom">{{ tuto.title }}</h3>
 
@@ -52,7 +52,6 @@
 						</div>
 
 						<p class="margin-top">
-							<h2>{{ slug }}</h2>
 							{{ tuto.description }}
 						</p>
 						<p class="margin-top">

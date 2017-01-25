@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 use DWAPS\ModelBundle\Entity\DwapsTuto;
+use DWAPS\ModelBundle\Entity\DwapsImage;
 use DWAPS\ModelBundle\Entity\DwapsTutoContent;
 
 class TutoController extends Controller
@@ -23,16 +24,22 @@ class TutoController extends Controller
 
         return $this->render('DWAPSCoreBundle:Tuto:tutorials.html.twig', array(
             'ongletActif' => $this->numNav,
-            'tutorials' => $tutorials,
-            'slug' => 'TEST'
+            'tutorials' => $tutorials
         ));
     }
 
-    public function tutorialAction( Request $request, $id )
+    public function tutorialAction( Request $request, $slug )
     {
     	$em = $this->getDoctrine()->getManager();
 
-    	$tuto = $em->getRepository( "DWAPSModelBundle:DwapsTuto" )->find( $id );
+    	$tuto = $em
+            ->getRepository( "DWAPSModelBundle:DwapsTuto" )
+            ->findOneBy(
+                array(
+                    'slug' => $slug
+                )
+            )
+        ;
 
     	if( null == $tuto )
     	{
