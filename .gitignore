@@ -1,5 +1,4 @@
 /app/config/parameters.yml
-/app/config/parameters.yml.dist
 /build/
 /phpunit.xml
 /var/*
@@ -16,4 +15,3 @@
 /vendor/
 /web/bundles/
 /phpunit.xml
-/phpunit.xml.dist
