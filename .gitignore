@@ -16,4 +16,10 @@
 /web/bundles/
 /phpunit.xml
 /src/DWAPS/CoreBundle/Resources/public/lib
-/web/bundles
+/web/*
+!/web/app.php
+!/web/app_dev.php
+!/web/apple-touch-icon.png
+!/web/config.php
+!/web/favicon.ico
+!/web/robots.txt
