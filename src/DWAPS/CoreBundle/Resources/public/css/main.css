@@ -10,6 +10,7 @@
 @import 'splash.css';
 @import 'splash-anim.css';
 @import 'menu.css';
+@import 'tutos.css';
 @import 'tuto.css';
 
 /*
@@ -136,6 +137,8 @@ a, a:link, a:visited, a:active, a:focus
 	margin-bottom: 30px;
 }
 
+
+/*MEDIA QUERIES*/
 @media screen and (min-width: 992px)
 {
 	.offset-left
@@ -150,6 +153,8 @@ a, a:link, a:visited, a:active, a:focus
 		right: 5%;
 	}
 }
+/**/
+
 
 input::-moz-focus-inner { 
   border: 0; 
@@ -170,48 +175,6 @@ input::-moz-focus-inner {
 
 /*BLOC TEXTE EN CARTE*/
 
-/* CARTES */
-.dwaps-card
-{
-	box-shadow: 2px 2px 5px #333;
-	background: #EBEBEB;
-	padding: 15px;
-}
-
-.dwaps-card h3
-{
-	text-align: center;
-	/*text-shadow: 1px 1px 0 #fff, 2px 2px 1px #888, 3px 3px 1px #222;*/
-	text-shadow: 1px 1px 1px #222;
-	text-transform: uppercase;
-	font-weight: bolder;
-	padding-bottom: 10px;
-}
-
-.dwaps-card p
-{
-	color: #33334A !important;
-	font-size: 1.3em;
-}
-
-.dwaps-card .label
-{
-	font-size: 0.8em;
-	font-weight: 100;
-	margin-left: 10px;
-	line-height: 45px;
-	text-shadow: none;
-	-webkit-transition: background .3s;
-	   -moz-transition: background .3s;
-	    -ms-transition: background .3s;
-	     -o-transition: background .3s;
-	        transition: background .3s;
-}
-
-.dwaps-card .label:hover
-{
-	background: #467575 !important;
-}
 
 /*PAGINATION*/
 .pagination

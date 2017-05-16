@@ -1,0 +1,189 @@
+/*CARTE GENERALE TUTORIELS*/
+
+.carte-tuto
+{
+  box-shadow: 2px 2px 5px #333;
+  background: #EBEBEB;
+  padding: 15px;
+}
+
+.carte-tuto h3
+{
+  text-align: center;
+  /*text-shadow: 1px 1px 0 #fff, 2px 2px 1px #888, 3px 3px 1px #222;*/
+  text-shadow: 1px 1px 1px #222;
+  text-transform: uppercase;
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+
+.carte-tuto p
+{
+  color: #33334A !important;
+  font-size: 1.3em;
+}
+
+.carte-tuto .label
+{
+  font-size: 0.8em;
+  font-weight: 100;
+  margin-left: 10px;
+  line-height: 45px;
+  text-shadow: none;
+  -webkit-transition: background .3s;
+     -moz-transition: background .3s;
+      -ms-transition: background .3s;
+       -o-transition: background .3s;
+          transition: background .3s;
+}
+
+.carte-tuto .label:hover
+{
+  background: #467575 !important;
+}
+
+/*CARTES RESUMES TUTORIELS*/
+.carte-resume-tuto
+{
+  position: relative; 
+  /*height: 350px !important;*/
+  perspective: 800px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.carte-resume-tuto .no-tuto,
+.carte-resume-tuto img
+{
+  position: absolute;
+  -webkit-transition: all 0.6s;
+     -moz-transition: all 0.6s;
+      -ms-transition: all 0.6s;
+       -o-transition: all 0.6s;
+          transition: all 0.6s;
+  height: 350px;
+  width: 90%;
+  box-shadow: 0 0 10px #333;
+  z-index: 999;
+  /*border-radius: 50%;*/
+}
+
+.carte-resume-tuto p
+{
+  height: 320px;
+  width: 90%;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  padding: 10px;
+  -webkit-transform: rotateY(-180deg);
+     -moz-transform: rotateY(-180deg);
+      -ms-transform: rotateY(-180deg);
+       -o-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-transition: opacity 1s, transform 0.6s;
+     -moz-transition: opacity 1s, transform 0.6s;
+      -ms-transition: opacity 1s, transform 0.6s;
+       -o-transition: opacity 1s, transform 0.6s;
+          transition: opacity 1s, transform 0.6s;
+  z-index: -1;
+  opacity: 0;
+}
+
+.carte-resume-tuto .no-tuto
+{
+  position: relative;
+  height: 350px;
+  background: #888;
+}
+
+.carte-resume-tuto .no-tuto::after
+{
+  display: block;
+  position: absolute;
+  content: "Mince, pas d'image...";
+  left: 50px;
+  top: 50px;
+  background: #fff;
+  -webkit-animation: microgame 5s infinite;
+  -moz-animation: microgame 5s infinite;
+  -ms-animation: microgame 5s infinite;
+  -o-animation: microgame 5s infinite;
+  animation: microgame 5s infinite;
+  box-shadow: 2px 2px 5px #000;
+  border-radius:  50%;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+}
+
+.carte-resume-tuto:hover img
+{
+  -webkit-transform: rotateY( 180deg );
+     -moz-transform: rotateY( 180deg );
+      -ms-transform: rotateY( 180deg );
+       -o-transform: rotateY( 180deg );
+          transform: rotateY( 180deg );
+  opacity: 0.2;
+  z-index: 0;
+  /* box-shadow: 3px 3px 5px #333;*/
+}
+
+.carte-resume-tuto:hover p
+{
+  -webkit-transform: rotateY( 0deg );
+     -moz-transform: rotateY( 0deg );
+      -ms-transform: rotateY( 0deg );
+       -o-transform: rotateY( 0deg );
+          transform: rotateY( 0deg );
+  z-index: 1000;
+  opacity: 1;
+}
+
+@keyframes microgame
+{
+  0% {
+    -webkit-transform: translate( 0px, 0px );
+       -moz-transform: translate( 0px, 0px );
+        -ms-transform: translate( 0px, 0px );
+         -o-transform: translate( 0px, 0px );
+            transform: translate( 0px, 0px );
+  }
+  30% {
+    -webkit-transform: translate( 280px, 180px );
+       -moz-transform: translate( 280px, 180px );
+        -ms-transform: translate( 280px, 180px );
+         -o-transform: translate( 280px, 180px );
+            transform: translate( 280px, 180px );
+  }
+  50% {
+    -webkit-transform: translate( 10px, 150px );
+       -moz-transform: translate( 10px, 150px );
+        -ms-transform: translate( 10px, 150px );
+         -o-transform: translate( 10px, 150px );
+            transform: translate( 10px, 150px );
+  }
+  80% {
+    -webkit-transform: translate( 180px, 0px );
+       -moz-transform: translate( 180px, 0px );
+        -ms-transform: translate( 180px, 0px );
+         -o-transform: translate( 180px, 0px );
+            transform: translate( 180px, 0px );
+  }
+  100% {
+    -webkit-transform: translate( 0px, 0px );
+       -moz-transform: translate( 0px, 0px );
+        -ms-transform: translate( 0px, 0px );
+         -o-transform: translate( 0px, 0px );
+            transform: translate( 0px, 0px );
+  }
+}
+

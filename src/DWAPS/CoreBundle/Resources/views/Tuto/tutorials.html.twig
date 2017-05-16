@@ -20,6 +20,8 @@
 
 {% block dwaps_core_body %}
 
+{# PAGINATION EN ATTENTE !!! #}
+{# 
 	<div class="row text-center margin-xtrem-top">
 		<div class="col-xs-12">
 			{{
@@ -27,52 +29,63 @@
 			}}
 		</div>
 	</div>
+ #}
 
-	<div class="row">
+	<div class="row margin-xtrem-top">
 		{% for tuto in tutorials %}
 
 			{% if loop.index % 2 != 0 %}
 				<div class="row">&nbsp;</div>
-				<div class="dwaps-card col-sm-12 col-md-5 offset-left margin-top">
+				<div class="carte-tuto col-sm-12 col-md-5 offset-left margin-top">
 			{% else %}
-				<div class="dwaps-card col-sm-12 col-md-5 col-md-offset-2 offset-right margin-top">
+				<div class="carte-tuto col-sm-12 col-md-5 col-md-offset-2 offset-right margin-top">
 			{% endif %}
 			
 			
-				<a href="{{ path( 'dwaps_core_tutorial', { slug: tuto.slug } ) }}">
 
 						<h3 class="dwaps-red margin-bottom">{{ tuto.title }}</h3>
 
-						<div class="text-center">
-							{% if tuto.imgPathExists %}
-		                        <img src="{{ asset( '/bundles/dwapscore/images/' ~ tuto.image.url ~ '.png' ) }}" alt="tuto.image.alt">
-		                    {% else %}
-		                        <div class="no-tuto"></div>
-							{% endif %}
+						<div class="carte-resume-tuto row">
+
+							<a href="{{ path( 'dwaps_core_tutorial', { slug: tuto.slug } ) }}">
+								{% if tuto.imgPathExists %}
+	                    <img
+	                    	src="{{ asset( '/bundles/dwapscore/images/' ~ tuto.image.url ~ '.png' ) }}"
+	                    	alt="tuto.image.alt">
+	                {% else %}
+	                    <div class="no-tuto">
+	                    </div>
+								{% endif %}
+									{# DESCRIPTION TUTO #}
+									<p class="margin-top">
+										{{ tuto.description }}
+									</p>
+							</a>
+
 						</div>
 
-						<p class="margin-top">
-							{{ tuto.description }}
-						</p>
-						<p class="margin-top">
+						<p class="row margin-top">
 							{% for cat in tuto.category %}
-								<a href="#" class="label dwaps-bg-blue">
+								<a href="#" onclick="return false" class="label dwaps-bg-blue"> {# onclick PROVISOIRE !!! #}
 								<!-- <a href="/category/{{ cat.route }}" class="label dwaps-bg-blue"> -->
 							    	{{ cat.name }}
 								</a>
 							{% endfor %}
 						</p>
-				</a>
 
 			</div>
 		{% else %}
-		    <div class="dwaps-card margin-xtrem-top">
+		    <div class="carte-tuto margin-xtrem-top">
 		    	Pas de tutos pour le moment !!!
 		    	<!-- Faire un formulaire pour garder l'email des interessés -->
 		    </div>
 		{% endfor %}
 	</div>
 
+
+
+{# PAGINATION EN ATTENTE !!! #}
+{# 
 	<div class="row text-center">
 		<div class="col-xs-12">
 			{{
@@ -80,5 +93,6 @@
 			}}
 		</div>
 	</div>
+#}
 
 {% endblock %}
